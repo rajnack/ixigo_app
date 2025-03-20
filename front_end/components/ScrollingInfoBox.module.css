@@ -1,0 +1,42 @@
+
+.scrollingWordsContainer {
+    height: 50px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.scrollingWordBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.scrollingWordBoxUl {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    animation: scrollVerticalAnimation 4s linear infinite; 
+}
+
+.scrollingWordBoxItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50px; 
+}
+
+/* Keyframes for vertical scrolling effect */
+@keyframes scrollVerticalAnimation {
+    0% {
+        transform: translateY(0); 
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

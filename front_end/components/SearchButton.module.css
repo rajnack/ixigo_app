@@ -1,0 +1,14 @@
+/* SearchButton.module.css */
+@keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  
+  .hover-move-right:hover .animated-icon {
+    animation: moveRight 0.5s infinite alternate ease-in-out;
+  }
+  

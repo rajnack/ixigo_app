@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  
+}
+
+button {
+  @apply cursor-pointer outline-none;
+}
+
+.wrapper {
+  @apply mx-auto w-[96%] max-w-[1790px];
+  
+}
+
+img {
+  @apply w-full block object-cover;
+}
+
+.footer .wrapper{
+  @apply mx-auto w-[96%] max-w-[1790px];
+}
