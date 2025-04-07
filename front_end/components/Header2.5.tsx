@@ -69,20 +69,11 @@ const Navigation = () => {
         </ul>
     );
 };
-interface User {
-    name: string;
-    email: string;
-    image: string;
-}
 
-interface Session {
-    user: User;
-    expires: string;
-}
 const HeaderHotel = () => {
     const [isVisible, setIsVisible] = useState(false);
 
-    const { data: session } = useSession<Session>();
+    const { data: session } = useSession();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {

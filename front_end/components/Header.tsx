@@ -7,37 +7,28 @@ import { useSession, signOut } from "next-auth/react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-interface User {
-  name: string;
-  email: string;
-  image: string;
-}
 
-interface Session {
-  user: User;
-  expires: string;
-}
 
 const Header = () => {
-  const { data: session } = useSession<Session>();
+  const { data: session } = useSession();
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
- 
+
 
   useEffect(() => {
-    
+
     const token = localStorage.getItem("token");
     setIsLoggedIn(!!token);
   }, []);
 
   const handleAuth = () => {
     if (isLoggedIn) {
-      
+
       localStorage.removeItem("token");
       setIsLoggedIn(false);
-      router.push("/"); 
+      router.push("/");
     } else {
-      
+
       router.push("/login");
     }
   };

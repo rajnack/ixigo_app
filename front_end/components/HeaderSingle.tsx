@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, BadgePercent, Headset } from "lucide-react";
 import { useSession, signOut } from "next-auth/react";
+
+
 
 const Navigation = () => {
     const navItems = [
@@ -18,6 +19,7 @@ const Navigation = () => {
             href: "/hotels",
             src: "/images/hotel.svg",
             label: "Hotels",
+            badge: "Up to 50% Off",
         },
         {
             href: "/trains",
@@ -68,30 +70,11 @@ const Navigation = () => {
     );
 };
 
-interface User {
-    name: string;
-    email: string;
-    image: string;
-}
-
-interface Session {
-    user: User;
-    expires: string;
-}
-
 const SingleHeader = () => {
-    const [isVisible, setIsVisible] = useState(false);
+    // const [isVisible, setIsVisible] = useState(false);
 
-    const { data: session } = useSession<Session>();
+    const { data: session } = useSession();
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsVisible(window.scrollY > 100);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <div

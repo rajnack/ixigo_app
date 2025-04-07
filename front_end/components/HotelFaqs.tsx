@@ -21,7 +21,7 @@ const BookingFaqs = () => {
             question: "How to get a discount on hotel booking?",
             answer: (
                 <>
-                   Yes, you can choose the ‘Pay at Hotel’ option on ixigo. With this option, you can effortlessly book your accommodation online and can pay for your stay directly at the hotel.
+                    Yes, you can choose the ‘Pay at Hotel’ option on ixigo. With this option, you can effortlessly book your accommodation online and can pay for your stay directly at the hotel.
                 </>
             ),
         },
@@ -29,7 +29,7 @@ const BookingFaqs = () => {
             question: "Is it possible to book the hotel online and pay directly at the hotel?",
             answer: (
                 <>
-                   Yes, you can choose the ‘Pay at Hotel’ option on ixigo. With this option, you can effortlessly book your accommodation online and can pay for your stay directly at the hotel.
+                    Yes, you can choose the ‘Pay at Hotel’ option on ixigo. With this option, you can effortlessly book your accommodation online and can pay for your stay directly at the hotel.
                 </>
             ),
         },
@@ -53,7 +53,7 @@ const BookingFaqs = () => {
             question: "How secure is the payment process on ixigo?",
             answer: (
                 <>
-                   ixigo ensures a safe and seamless hotel booking and payment experience. The process is extremely secure and reliable. Customers can choose from multiple payment methods or even pay at the hotel directly.
+                    ixigo ensures a safe and seamless hotel booking and payment experience. The process is extremely secure and reliable. Customers can choose from multiple payment methods or even pay at the hotel directly.
                 </>
             ),
         },
