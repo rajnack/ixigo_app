@@ -29,9 +29,9 @@ const Services = () => {
 
             <div className="pt-[45px] pb-[45px] px-[90px] z-20 flex justify-between lg:px-[60px] sm:px-[30px]">
                 {/* Left Content */}
-                <div className="flex gap-x-[30px]">
+                <div className="flex md:gap-x-[30px] sm:gap-x-[16px]">
                     {/* Logo */}
-                    <div className="z-10 w-[160px] h-[160px] object-cover">
+                    <div className="z-10 md:w-[160px] md:h-[160px] sm:w-[115px] sm:h-[115px] object-cover">
                         <Image
                             src="/images/ixigo-logo.png"
                             alt="Ixigo logo"
@@ -54,7 +54,7 @@ const Services = () => {
                                         className="object-cover w-full h-full"
                                     />
                                 </span>
-                                <p className="text-body-lg">Pay at hotel option available</p>
+                                <p className="md:text-body-lg sm:text-body-xs">Pay at hotel option available</p>
                             </div>
                             <div className="flex items-center gap-[5px]">
                                 <span className="w-[24px] h-[24px]">
@@ -66,11 +66,11 @@ const Services = () => {
                                         className="object-cover w-full h-full"
                                     />
                                 </span>
-                                <p className="text-body-lg">Free cancellations on hotel bookings</p>
+                                <p className="md:text-body-lg sm:text-body-xs">Free cancellations on hotel bookings</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-x-[10px]">
-                            <div className="pt-[7px] pb-[7px] px-[8px] flex flex-col items-center justify-center gap-[2px] rounded-[10px] bg-green-800">
+                            <div className="md:pt-[7px] md:pb-[7px] md:px-[8px] sm:pt-[2px] sm:pb-[2px] sm:px-[2px] flex flex-col items-center justify-center gap-[2px] rounded-[10px] bg-green-800">
                                 <p className="text-white text-body-xl">4.5</p>
                                 <p className="tracking-[2.4px] text-body2xs text-center text-white">RATING</p>
                             </div>
@@ -87,13 +87,13 @@ const Services = () => {
                     </div>
                 </div>
                 {/* Right Content */}
-                <div className="flex items-center gap-x-[20px]">
+                <div className="flex items-center md:gap-x-[20px] sm:gap-x-[10px]">
                     {/* App Download */}
                     <div>
-                        <p className="text-body-md mb-[10px] px-[10px] font-medium">Download the App</p>
+                        <p className="md:text-body-md sm:text-[10px] mb-[10px] px-[10px] font-medium">Download the App</p>
                         <div className="flex flex-col gap-[5px]">
                             <a href="#" aria-label="Download from Google Play">
-                                <div className="relative h-[47px] w-[158px]">
+                                <div className="relative md:h-[47px] md:w-[158px] sm:h-[35px] sm:w-[115px]">
                                     <Image
                                         src="/images/gpay.jpeg"
                                         alt="Google Play Store logo"
@@ -104,7 +104,7 @@ const Services = () => {
                                 </div>
                             </a>
                             <a href="#" aria-label="Download from App Store">
-                                <div className="relative h-[47px] w-[158px]">
+                                <div className="relative md:h-[47px] md:w-[158px] sm:w-[115px] sm:h-[35px]">
                                     <Image
                                         src="/images/appstore.jpeg"
                                         alt="Apple App Store logo"
@@ -118,7 +118,7 @@ const Services = () => {
                     </div>
                     {/* QR Code */}
                     <figure className="z-10 p-[10px] text-center">
-                        <div className="w-[140px] h-[140px]">
+                        <div className="md:w-[140px] md:h-[140px] sm:w-[90px] sm:h-[90px]">
                             <Image
                                 src="/images/qrcode.png"
                                 alt="Scan this QR code to download the app"

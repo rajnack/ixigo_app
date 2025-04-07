@@ -83,7 +83,7 @@ const BookingFaqs = () => {
                         >
                             <div className="flex w-full">
                                 <div className="w-full">
-                                    <div className="pt-[5px] pb-[15px] text-secondary text-body-lg">{faq.answer}</div>
+                                    <div className="pt-[5px] pb-[15px] text-secondary md:text-body-lg sm:text-body-md">{faq.answer}</div>
                                 </div>
                             </div>
                         </div>

@@ -9,7 +9,7 @@ const Features = () => {
             <br />
             Moreover, the platform provides an array of convenient features, including the ability to effortlessly share hotel wishlists, the flexibility to pay at the hotel, and 24x7 customer support to ensure a seamless experience for all travellers.
             <div>
-                <h2 className="text-body-lg">
+                <h2 className="md:text-body-lg ">
                     <strong>Why book hotels online with ixigo?</strong>
                 </h2>
                 ixigo has emerged as the go-to travel platform for train, flight, and bus bookings over the years. It has now expanded its services to offer online hotel booking to travellers. From luxury to budget-friendly accommodations, we ensure a safe and comfortable hotel stay experience across India and internationally.
@@ -19,7 +19,7 @@ const Features = () => {
             </div>
             <ol>
                 <li><strong>Largest selection of hotels</strong><br />
-                    Choose from a wide range of properties to suit your preferences. Be it for family vacations, business trips, or leisure getaways – we've got it all covered.</li>
+                    Choose from a wide range of properties to suit your preferences. Be it for family vacations, business trips, or leisure getaways – we have got it all covered.</li>
                 <li><strong>Best deals and prices on hotels</strong><br />
                     Get the lowest prices on your bookings with the best hotel offers and use our advanced filter options for perfect selection.</li>
                 <li><strong>Pay at Hotel option available</strong><br />
@@ -54,7 +54,7 @@ const Features = () => {
                 You can easily compare prices of several properties and read reviews before making a reservation. Booking budget-friendly hotels has never been simpler. </p>
             <h2 className="text-body-lg"><strong>What are the best offers available for hotel booking on ixigo? </strong></h2>
             <p>
-            ixigo provides the best prices on hotel room bookings. Additionally, we have multiple discount offers, promo codes and deals that can help you save even more on hotel prices. You can also get exclusive discounts and cashback on credit cards, debit cards and e-wallets. Check out our
+                ixigo provides the best prices on hotel room bookings. Additionally, we have multiple discount offers, promo codes and deals that can help you save even more on hotel prices. You can also get exclusive discounts and cashback on credit cards, debit cards and e-wallets. Check out our
                 <a href="#"> hotel offers </a>
                 page for more details.
             </p>

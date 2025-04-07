@@ -6,7 +6,7 @@ const FlightBooking = () => {
             <div className="body-md text-secondary [&_h2]:my-3.75 group">
                 <div>
                     <div>
-                        <h2 className="ftr-ixi-about__heading text-black text-body-xxl  font-semibold my-[15px]">
+                        <h2 className="ftr-ixi-about__heading text-black md:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
                             <strong>Flight Ticket Booking</strong>
                         </h2>
                         <p className="ftr__ixi-about__content text-base mt-[10px] mb-0">
@@ -14,7 +14,7 @@ const FlightBooking = () => {
                         </p>
                     </div>
                     <div>
-                        <h2 className="ftr-ixi-about__heading text-black text-body-xxl font-semibold my-[15px]">
+                        <h2 className="ftr-ixi-about__heading text-black md:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
                             <strong>Cheap Flight Ticket</strong>
                         </h2>
                         <div className="ftr__ixi-about__content">
@@ -29,7 +29,7 @@ const FlightBooking = () => {
                                     On ixigo, you can save up to 40% on <strong>air ticket booking</strong> online with our fare alert feature on domestic and <a href="#" className="text-blue-500">international flights</a>.
                                 </li>
                                 <li className="faqlist pl-[10px] mt-[10px] list-disc">
-                                    You can also select ixigo's Special Fares (Student/Senior Citizen/Armed Forces) to book flights at cheaper prices. By opting for these Special Fares, you can get great discounts on available flight options.
+                                    You can also select ixigo Special Fares (Student/Senior Citizen/Armed Forces) to book flights at cheaper prices. By opting for these Special Fares, you can get great discounts on available flight options.
                                 </li>
                             </ul>
                             <p className="mt-[10px] mb-0">
@@ -38,7 +38,7 @@ const FlightBooking = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 className="ftr-ixi-about__heading text-black text-body-xxl font-semibold my-[15px]">
+                        <h2 className="ftr-ixi-about__heading text-black md:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
                             <strong>Domestic Flight Booking</strong>
                         </h2>
                         <p className="ftr__ixi-about__content text-base mt-[10px] mb-0">

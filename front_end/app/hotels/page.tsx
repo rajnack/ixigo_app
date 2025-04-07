@@ -1,4 +1,3 @@
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header1";
 import Hotel from "@/components/HotelPage";
@@ -6,7 +5,7 @@ import Hotel from "@/components/HotelPage";
 
 const HotelPage = () => {
     return ( 
-        <div>
+        <div className="main overflow-x-scroll">
             <Header/>
             <Hotel/>
             <Footer/>

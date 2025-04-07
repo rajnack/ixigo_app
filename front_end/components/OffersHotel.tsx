@@ -78,7 +78,7 @@ export default function HotelsList() {
                                 className="shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] xl:duration-300 xl:ease-out"
                             >
                                 <Link href={`/offers/${item.id}`}>
-                                    <div className='w-[364px] h-[225px] rounded-20 object-cover'>
+                                    <div className='md:w-[364px] md:h-[225px] sm:w-[280px] sm:h-[180px] rounded-20 object-cover'>
                                         <Image
                                             src={item.image}
                                             alt={item.alt}
@@ -131,7 +131,7 @@ export default function HotelsList() {
                                 key={service.id}
                                 className="shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] xl:duration-300 xl:ease-out"
                             >
-                                <div className='w-[363px] h-[123px] rounded-20 object-cover'>
+                                <div className='md:w-[363px] md:h-[123px] sm:w-[280px] sm:h-[110px] rounded-20 object-cover'>
                                     <Image
                                         src={service.image}
                                         alt={service.alt}

@@ -7,6 +7,7 @@ import TripSelector from "./TripSelector";
 import { ChevronRight, Check, CircleX } from "lucide-react";
 import HeaderPage from "./Header2";
 
+
 const Navigation = () => {
     const navItems = [
         {
@@ -146,7 +147,7 @@ const NavPage = () => {
             <HeaderPage />
             <div className="px-7 z-20 flex justify-between items-center  relative">
                 <Navigation />
-                <h1 className="lg:text-lg sm:text-sm text-custom-active">Flight Booking</h1>
+                <h1 className="lg:text-lg sm:text-sm text-custom-active sm:hidden md:block">Flight Booking</h1>
             </div>
             <div className="border-0 border-solid border-[#e5e7eb] box-border rounded-[20px] shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] p-7 flex flex-col gap-[10px] bg-white">
                 <div className="flex justify-between items-center">
@@ -157,7 +158,7 @@ const NavPage = () => {
                 </div>
                 <div className="xl:flex xl:gap-0.5 xl:h-[60px]  ">
                     <div className="relative flex gap-0.5 flex-1 border-b-1 border-neutral-300">
-                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none rounded-1-10">
+                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none rounded-1-10 sm:rounded-bl-none sm:mb-0.5">
                             <div className="flex justify-between items-center relative w-full h-full block">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
                                     <div className="flex items-center">
@@ -176,8 +177,8 @@ const NavPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none">
-                            <div className="flex justify-between items-center relative w-full h-full pl-7 block">
+                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none sm:rounded-tr-10">
+                            <div className="flex justify-between items-center relative w-full h-full pl-7 block sm:pl-0">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
                                     <div className="flex items-center">
                                         <div className="flex flex-col">
@@ -196,10 +197,10 @@ const NavPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between border-none relative w-[320px] gap-0.5 overflow-visible calendarInput sm:w-full">
+                    <div className="flex items-center justify-between xl:border-none relative w-[320px] gap-0.5 overflow-visible calendarInput sm:w-full sm:border-b border-charcoal-400 ">
                         <div className="bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over w-full">
                             <div className="flex justify-between items-center relative w-full h-[60px] justify-center border-b-4 lg:min-h-[60px] border-transparent">
-                                <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
+                                <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4 ">
                                     <div className="flex items-center">
                                         <div className="flex flex-col">
                                             <p className="body-xs text-custom-gray">Departure</p>
@@ -227,7 +228,7 @@ const NavPage = () => {
                     </div>
                     <div className="relative overflow-visible">
                         <div className="flex justify-between items-center relative w-[220px] bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over border-b-4 py-0.5 flex justify-center md:h-full h-full border-transparent sm:w-full sm:border-t-1 border-neutral-300">
-                            <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
+                            <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4 sm:pb-0">
                                 <div className="flex items-center !border-none">
                                     <div className="flex flex-col">
                                         <p className="body-xs text-custom-gray">
@@ -243,16 +244,16 @@ const NavPage = () => {
                     </div>
                     <button
                         onClick={handleSearchClick}
-                        className="inline-flex justify-center items-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-[5px] rounded-[10px] min-h-[50px] text-2xl xl:w-[160px] px-[25px] pr-[15px] rounded-none rounded-r-[10px] sm:w-full"
+                        className="inline-flex justify-center items-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-[5px] rounded-[10px] min-h-[50px] text-2xl xl:w-[160px] px-[25px] pr-[15px] rounded-none rounded-r-[10px] sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full"
                     >
                         Search
                         <ChevronRight className="h-6 w-6" />
                     </button>
                 </div>
                 <div className="xl:flex xl:justify-between xl:items-center xl:border-none pb-0 pl-0 sm:flex-row sm:justify-between sm:items-center ">
-                    <div className="flex gap-4 !flex-row justify-start sm:mb-[10px]">
+                    <div className="flex md:gap-4 !flex-row justify-start sm:mb-[10px] sm:gap-[5px]">
                         <div className="flex gap-5 items-center relative">
-                            <p className="text-body-lg sm:text-body-md flex text-custom-dark gap-[3px] font-bold">
+                            <p className="md:text-body-lg sm:text-body-sm flex text-custom-dark gap-[3px] font-bold">
                                 Special Fares
                                 <span className="font-normal text-custom-gray">
                                     (Optional)
@@ -260,7 +261,7 @@ const NavPage = () => {
                                 <span className="block text-custom-gray">:</span>
                             </p>
                         </div>
-                        <div className="flex gap-10 xl:gap-7">
+                        <div className="flex md:gap-10 xl:gap-7 sm:gap-[5px]">
 
                             <div
                                 className={`relative text-custom-dark border-custom-dark h-[35px] icon-md text-body-sm inline-flex items-center font-normal rounded-full px-2 border border-solid shrink-0 ${activeType === "Student"

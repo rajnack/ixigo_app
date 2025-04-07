@@ -150,14 +150,14 @@ const Questions = () => {
                             onClick={() => toggleVisibility(index)}
                         >
                             <div className="flex-grow">
-                                <h3 className="text-body-xl font-bold">{faq.question}</h3>
+                                <h3 className="text-body-xl font-bold sm:text-body-lg">{faq.question}</h3>
                             </div>
                             <div className={`transition-transform duration-150 justify-end ${openIndex === index ? "rotate-180" : ""}`}>
                                 <ChevronDown className="w-[1.7em] h-[1.7em]" />
                             </div>
                         </div>
                         {openIndex === index && (
-                            <div className="pt-[5px] pb-[15px] text-secondary text-body-lg">{faq.answer}</div>
+                            <div className="pt-[5px] pb-[15px] text-secondary md:text-body-lg sm:text-body-md">{faq.answer}</div>
                         )}
                     </div>
                 ))}

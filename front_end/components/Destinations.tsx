@@ -58,7 +58,7 @@ const PopularDestination = () => {
                             <a href="destinations">
                                 <div className="max-w-[280px] w-full rounded-20 overflow-hidden">
                                     <div className="relative w-full overflow-hidden">
-                                        <div className='w-[280px] h-[340px] overflow-hidden rounded-[20px]'>
+                                        <div className='md:w-[280px] md:h-[340px] sm:w-[200px] sm:h-[260px] overflow-hidden rounded-[20px]'>
                                             <Image
                                                 src={destination.image}
                                                 alt="destination"

@@ -33,7 +33,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-6 px-0 sm:gap-[6px]">
+        <ul className="flex justify-between text-base font-normal gap-6 px-0 sm:gap-4">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -42,7 +42,7 @@ const Navigation = () => {
                 >
                     <a
                         href={item.href}
-                        className="flex items-center gap-5 cursor-pointer"
+                        className="flex max-[580px]:flex-col items-center gap-5 cursor-pointer "
                     >
                         <div className="w-[60px] h-[60px] flex justify-center xl:w-auto">
                             <Image
@@ -54,7 +54,7 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px] rounded-[10px] min-h-[15px] text-[10px]">
+                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px] rounded-[10px] min-h-[15px] text-[10px] max-[580px]:hidden ">
                                 <p className="">{item.badge}</p>
                             </div>
                         )}
@@ -102,7 +102,7 @@ const HeaderPage = () => {
         >
             <div className="wrapper w-full h-[82px] bg-white flex justify-between max-auto relative mainContainer">
                 <div className="flex xl:gap-[20px] sm:gap-[10px] items-center">
-                    <Link href="/">
+                    <Link href="/" className=" max-[679px]:hidden md:block">
                         <Image
                             src="/images/logo.svg"
                             alt="Logo"
@@ -115,7 +115,7 @@ const HeaderPage = () => {
                         <div className="z-[20px] flex justify-between items-center relative">
                             <Navigation />
                         </div>
-                        <div className="sm:hidden md:flex items-center relative dropdownTab">
+                        <div className="max-[768px]:hidden md:block md:flex items-center relative dropdownTab">
                             <div className="flex gap-[5px] items-center cursor-pointer relative ">
                                 <Image
                                     src="/images/edje.svg"
@@ -134,14 +134,14 @@ const HeaderPage = () => {
                     {/* Mobile Menu Icon (Visible on Small Screens) */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="absolute top-[25px] right-[1px] lg:hidden text-gray-700 hover:text-black focus:outline-none"
+                        className="absolute top-[25px] right-[1px] lg:hidden text-gray-700 hover:text-black focus:outline-none sm:right-[15px]"
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />} {/* Toggles Icon */}
                     </button>
                     {/* Desktop Navigation (Visible on lg and larger screens) */}
                     <div className="hidden lg:flex items-center justify-end">
                         <div className="flex items-center justify-end gap-[40px]">
-                            <div className="flex gap-[30px] py-[10px]">
+                            <div className="flex gap-[30px] py-[10px] md:gap-10px">
                                 {/* Offers Section */}
                                 <div className="flex items-center gap-[5px] cursor-pointer">
                                     <BadgePercent className="text-gray-500 w-6 h-6 hover:text-black" />

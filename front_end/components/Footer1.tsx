@@ -116,7 +116,7 @@ const FlightRoutes = () => {
         <div className="bg-charcoal w-full px-5 xl:px-0">
             <div className="wrapper flex flex-col">
                 {/* Tabs */}
-                <div className="flex items-center border-b pt-[20px] gap-[30px]">
+                <div className="flex items-center border-b pt-[20px] gap-[30px] sm:gap-0">
                     {tabs.map((label, index) => (
                         <button
                             key={index}
@@ -136,7 +136,7 @@ const FlightRoutes = () => {
                 <div className="flex-grow pt-[20px] pb-[10px] flex flex-wrap">
                     {content[activeTab]?.map((route, index) => (
                         <a href="#" key={index} className="w-full basis-1/5 pb-2.5">
-                            <p className="text-body-sm text-secondary">{route}</p>
+                            <p className="md:text-body-sm text-secondary sm:text-[10px]">{route}</p>
                         </a>
                     ))}
                 </div>

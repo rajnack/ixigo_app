@@ -40,7 +40,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-6 px-0">
+        <ul className="flex justify-between text-base font-normal gap-20 px-0">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -61,13 +61,13 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-2  rounded-[10px]">
-                                <p className="text-body-2xs">{item.badge}</p>
+                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
+                                <p className="md:text-body-2xs sm:text-[10px]">{item.badge}</p>
                             </div>
                         )}
-                        <p className="text-xl font-semibold">{item.label}</p>
+                        <p className="sm:text-sm xl:text-xl font-semibold">{item.label}</p>
                         {item.isActive && (
-                            <p className="w-full bg-[#0770E4] absolute bottom-0 rounded left-0 h-2"></p>
+                            <p className="w-full bg-[#0770E4] absolute bottom-0 rounded left-0 h-5"></p>
                         )}
                     </a>
                 </li>
@@ -96,13 +96,13 @@ const Hotel = () => {
                 <div className="hom-container">
                     <div className="px-7 z-20 flex justify-between items-center gap-10 relative">
                         <Navigation />
-                        <h1 className="text-body-lg text-custom-active text-primary">Cheap Hotel Booking Online</h1>
+                        <h1 className="text-body-lg text-custom-active text-primary sm:hidden">Cheap Hotel Booking Online</h1>
                     </div>
                     <div className="rounded-[20px] bg-text-primary p-[20px] shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)]">
-                        <div className="z-20 flex gap-1">
+                        <div className="z-20 flex gap-1 sm:flex-col">
                             {/* Destination */}
                             <div className="flex-1 flex-shrink-0 text-primary relative">
-                                <div className="flex-1 flex-shrink-0 text-primary cursor-pointer rounded-1-10 bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px">
+                                <div className="flex-1 flex-shrink-0 text-primary cursor-pointer rounded-1-10 bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px sm:rounded-bl-none sm:rounded-tr-10">
                                     <div className="flex-1">
                                         <p className="text-body-xs text-secondary">Destination</p>
                                         <input
@@ -115,7 +115,7 @@ const Hotel = () => {
                                 </div>
                             </div>
                             {/* Check-in and Check-out */}
-                            <div className="flex flex-[0_0_36%] gap-1 relative max-w-[590px]">
+                            <div className="flex flex-[0_0_36%] gap-1 relative max-w-[590px] sm:max-w-full">
                                 <div className="flex-1 flex-shrink-0 text-primary cursor-pointer bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px">
                                     <div className="flex-1">
                                         <p className="text-body-xs text-secondary">Check-in</p>
@@ -146,7 +146,7 @@ const Hotel = () => {
                                 </div>
                             </div>
                             {/* Rooms & Guests */}
-                            <div className="flex-[0_0_17%] max-w-[250px] relative">
+                            <div className="flex-[0_0_17%] md:max-w-[250px] relative">
                                 <div className="flex-1 flex-shrink-0 text-primary cursor-pointer bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px">
                                     <div className="flex-1">
                                         <p className="text-body-xs text-secondary">Rooms & Guests</p>
@@ -160,7 +160,7 @@ const Hotel = () => {
                                 </div>
                             </div>
                             {/* Search Button */}
-                            <button className={`w-[194px] flex items-center justify-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-1.5 rounded-r-lg rounded-l-none min-h-[50px] px-5 flex-shrink-0 ${styles['hover-move-right']}`}>
+                            <button className={`w-[194px] sm:w-full sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full flex items-center justify-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-1.5 rounded-r-lg rounded-l-none min-h-[50px] px-5 flex-shrink-0 ${styles['hover-move-right']}`}>
                                 <div className="flex items-center gap-1.5 font-medium text-body-lg">
                                     Search
                                     <div className={`h-6 w-6 transform ${styles['animated-icon']}`}>

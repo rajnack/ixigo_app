@@ -83,7 +83,7 @@ const BookFlight = () => {
                             const cityDate = cityDates.find((date) => date.cityId === city.id);
 
                             return (
-                                <div key={index} className="shrink-0 overflow-hidden rounded-xl flex flex-col border border-neutral-200 rounded-[20px] w-[352px] h-full">
+                                <div key={index} className="shrink-0 overflow-hidden rounded-xl flex flex-col border border-neutral-200 rounded-[20px] md:w-[352px] md:h-full sm:w-[280px] sm:h-[280px]">
                                     <div className="relative h-[210px] w-full">
                                         <Image
                                             src={city.image}

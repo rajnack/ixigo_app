@@ -27,7 +27,7 @@ const Login = () => {
         }
     }, [session, router]);
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, "");
         setMobileNumber(value);
 
@@ -38,7 +38,7 @@ const Login = () => {
         }
     };
 
-    const handlePasswordChange = (e) => {
+    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newPassword = e.target.value;
         setPassword(newPassword);
         validatePassword(newPassword);
@@ -74,7 +74,7 @@ const Login = () => {
         }
     };
 
-    const validatePassword = (password) => {
+    const validatePassword = (password: string): string | null => {//+
         const minLength = 8;
         const hasUpperCase = /[A-Z]/.test(password);
         const hasNumber = /\d/.test(password);
@@ -125,7 +125,7 @@ const Login = () => {
             </div>
             <div className="fixed z-[1300] inset-0 flex justify-center items-center !justify-end" aria-hidden="false">
                 <div className="fixed flex items-center justify-center inset-0 bg-black bg-opacity-50" aria-hidden="true">
-                    <div className="fixed top-0 left-0 h-screen w-[calc(100%-540px)] flex flex-col justify-center items-center">
+                    <div className="fixed top-0 left-0 h-screen w-[calc(100%-540px)] sm:hidden xl:block flex flex-col justify-center items-center">
                         <Image src="/images/offerhotels.png" alt="ixigo advantages" width="500" height="500" className="w-[620px]" />
                     </div>
                 </div>
@@ -139,7 +139,7 @@ const Login = () => {
                                 <X className="h-2em w-2em text-charcoal-800 display:inline-block" />
                             </button>
                         </Link>
-                        <div className="fixed z-10 !rounded-t-[20px] !rounded-b-none !max-w-full bg-white w-[520px] top-1/2 translate-y-[-50%]">
+                        <div className="fixed z-10 !rounded-t-[20px] !rounded-b-none !max-w-full bg-white w-[520px] sm:w-[460px] top-1/2 translate-y-[-50%]">
                             <div className="p-[30px]">
                                 <h5 className="text-body-xxl font-bold">Log in to ixigo</h5>
                                 <div className="login-form">

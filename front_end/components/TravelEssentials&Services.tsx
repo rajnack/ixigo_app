@@ -99,7 +99,7 @@ const DoMoreWithIxigo = () => {
                     <div className="relative w-full my-auto mx-0 ">
                         <div className="flex order-3 overflow-x-auto scrollbar-hide overscroll-x-contain snap-x-mandatory scroll-smooth no-scrollbar !gap-0 justify-between">
                             {features.map((feature, index) => (
-                                <div key={index} className="shrink-0 overflow-hidden rounded-xl max-w-[172px] w-full flex flex-col items-center pax-10 border-r-[1px] last:border-r-0 border-customNeutral px-4 !rounded-none last:border-r-0">
+                                <div key={index} className="shrink-0 overflow-hidden rounded-xl md:max-w-[172px] sm:max-w-[156px] w-full flex flex-col items-center pax-10 border-r-[1px] last:border-r-0 border-customNeutral px-4 !rounded-none last:border-r-0">
                                     <a href={feature.link} className="relative flex flex-col items-center min-w-[60px] text-center xl:hover:scale-[102%] inline-flex w-1/4 m-auto">
                                         <span className="flex flex-col items-center justify-center">
                                             <div style={{ width: feature.width, height: feature.height }}>
@@ -118,7 +118,7 @@ const DoMoreWithIxigo = () => {
 
                 <div className='pt-[35px]'>
                     <div className='flex flex-col py-[35px] '>
-                        <h2 className='text-body-xxl font-bold'>Today s Flight Offers</h2>
+                        <h2 className='md:text-body-xxl font-bold sm:text-body-xl'>Today s Flight Offers</h2>
                         <div className='relative w-full my-auto mx-0'>
                             <div className="flex order-3 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scrollbar-hide scroll-smooth no-scrollbar py-[10px] offers-carousel-gutter gap-[25px] proximity-scroll-snapping">
                                 {cards.slice(currentIndex, currentIndex + 12).map((card, index) => (
@@ -127,7 +127,7 @@ const DoMoreWithIxigo = () => {
                                         className="shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-100 xl:duration-300 xl:ease-out"
                                     >
                                         <Link href={`/offers/${card.id}`}>
-                                            <div className="w-[364px] h-[225px] rounded-20 object-cover cursor-pointer">
+                                            <div className="xl:w-[364px] xl:h-[225px] rounded-20 object-cover cursor-pointer sm:w-[250px] sm:h-[180px]">
                                                 <Image
                                                     src={card.image}
                                                     alt="cards"
@@ -174,7 +174,7 @@ const DoMoreWithIxigo = () => {
                             <div className='flex order-3 overflow-x-auto scrollbar-hide overscroll-x-contain snap-x-mandatory scroll-smooth no-scrollbar py-[15px] gap-[20px]'>
                                 {imageCards.map((imageCard) => (
                                     <div key={imageCard.id} className='shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-100 xl:duration-300 xl:ease-out'>
-                                        <div className='w-[363px] h-[123px] rounded-20 object-cover'>
+                                        <div className='md:w-[363px] md:h-[123px] rounded-20 object-cover sm:w-[280px] sm:h-[105px]'>
                                             <Image
                                                 src={imageCard.image}
                                                 alt={imageCard.alt}

@@ -98,7 +98,7 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
                     <span className="overline-none mx-2">/</span>
                   </li>
                   <li>
-                    <span className="overline-none truncate">
+                    <span className="overline-none truncate sm:text-[14px]">
                       {offer.title}
                     </span>
                   </li>
@@ -106,7 +106,7 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
               </nav>
             </div>
             <div className="flex flex-col lg:flex-row lg:gap-[20px] lg:mt-[40px] relative">
-              <div className="lg:w-[400px] lg:rounded-[20px] lg:bg-white lg:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] h-fit">
+              <div className="lg:w-[400px] lg:rounded-[20px] lg:bg-white lg:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] h-fit sm:mb-[20px]">
                 <div className="lg:rounded-t-20 w-full h-[250px] lg:h-[179px] relative">
                   <Image
                     src={offer.image}
@@ -311,7 +311,7 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
               </div>
               <div className="lg:w-[1245px] bg-white rounded-[20px] px-[20px] lg:px-[40px] lg:py-[30px] lg:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] h-fit">
                 <div className="mb-[30px]">
-                  <h2 className="text-body-xxl font-bold mb-[10px]">About the Offer</h2>
+                  <h2 className="md:text-body-xxl sm:text-[20px] font-bold mb-[10px]">About the Offer</h2>
                   <div className="cms-content-container container [&_li]:text-base">
                     {Array.isArray(offer?.about) && offer.about.length > 0 ? (
                       <ul className="list-disc ml-[30px]">
@@ -355,7 +355,7 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
                   </div>
                 ) : null}
                 <div className="mb-[30px]">
-                  <h2 className="text-body-xxl font-bold mb-[10px]">Terms & Conditions</h2>
+                  <h2 className="md:text-body-xxl sm:text-[20px] font-bold mb-[10px]">Terms & Conditions</h2>
                   <div className="cms-content-container">
                     {Array.isArray(offer?.terms) && offer.terms.length > 0 ? (
                       <ul className="list-disc ml-[30px]">

@@ -57,8 +57,8 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-center gap-[60px]">
-                        <div className="flex items-center justify-center md:justify-start gap-[40px]">
+                    <div className="flex items-center justify-center gap-[60px] sm:gap-[25px]">
+                        <div className="flex items-center justify-center md:justify-start gap-[40px] sm:gap-[25px] max-[580px]:hidden md:block md:flex">
                             {/* Offers Section */}
                             <div className="flex items-center gap-[8px] cursor-pointer">
                                 <BadgePercent className="text-gray-500 w-6 h-6 hover:text-black" />
