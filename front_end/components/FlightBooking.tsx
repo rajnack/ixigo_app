@@ -6,7 +6,7 @@ const FlightBooking = () => {
             <div className="body-md text-secondary [&_h2]:my-3.75 group">
                 <div>
                     <div>
-                        <h2 className="ftr-ixi-about__heading text-black md:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
+                        <h2 className="ftr-ixi-about__heading text-black xl:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
                             <strong>Flight Ticket Booking</strong>
                         </h2>
                         <p className="ftr__ixi-about__content text-base mt-[10px] mb-0">
@@ -14,7 +14,7 @@ const FlightBooking = () => {
                         </p>
                     </div>
                     <div>
-                        <h2 className="ftr-ixi-about__heading text-black md:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
+                        <h2 className="ftr-ixi-about__heading text-black xl:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
                             <strong>Cheap Flight Ticket</strong>
                         </h2>
                         <div className="ftr__ixi-about__content">
@@ -38,7 +38,7 @@ const FlightBooking = () => {
                         </div>
                     </div>
                     <div>
-                        <h2 className="ftr-ixi-about__heading text-black md:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
+                        <h2 className="ftr-ixi-about__heading text-black xl:text-body-xxl sm:text-body-xl font-semibold my-[15px]">
                             <strong>Domestic Flight Booking</strong>
                         </h2>
                         <p className="ftr__ixi-about__content text-base mt-[10px] mb-0">

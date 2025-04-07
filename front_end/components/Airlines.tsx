@@ -43,7 +43,7 @@ const Airlines = () => {
                 className="w-full h-full absolute left-0 right-0 top-0 bottom-0"
               />
             </div>
-            <p className="md:text-body-md text-link font-bold text-blue-500 sm:text-[10px]">{airline.name}</p>
+            <p className="text-body-md text-link font-bold text-blue-500 sm:text-[10px]">{airline.name}</p>
           </a>
         ))}
       </div>

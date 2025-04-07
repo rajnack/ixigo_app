@@ -164,7 +164,7 @@ const HeaderHotel = () => {
                                         </button>
                                     </div>
                                 ) : (
-                                    <Link href="/login">
+                                    <Link href="/login1">
                                         <div className="flex items-center justify-between md:justify-end transition-all duration-100 ease-in-out">
                                             <div className="rounded-full flex justify-center items-center w-[40px] h-[40px] bg-sky-200">
                                                 <Image

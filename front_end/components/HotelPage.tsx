@@ -62,7 +62,7 @@ const Navigation = () => {
                         </div>
                         {item.badge && (
                             <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
-                                <p className="md:text-body-2xs sm:text-[10px]">{item.badge}</p>
+                                <p className="xl:text-body-2xs sm:text-[10px]">{item.badge}</p>
                             </div>
                         )}
                         <p className="sm:text-sm xl:text-xl font-semibold">{item.label}</p>
@@ -99,16 +99,16 @@ const Hotel = () => {
                         <h1 className="text-body-lg text-custom-active text-primary sm:hidden">Cheap Hotel Booking Online</h1>
                     </div>
                     <div className="rounded-[20px] bg-text-primary p-[20px] shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)]">
-                        <div className="z-20 flex gap-1 sm:flex-col">
+                        <div className="z-20 flex xl:flex-row gap-1 sm:flex-col">
                             {/* Destination */}
                             <div className="flex-1 flex-shrink-0 text-primary relative">
-                                <div className="flex-1 flex-shrink-0 text-primary cursor-pointer rounded-1-10 bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px sm:rounded-bl-none sm:rounded-tr-10">
+                                <div className="flex-1 flex-shrink-0 text-primary cursor-pointer xl:rounded-1-10 bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px sm:rounded-bl-none sm:rounded-tr-10 sm:rounded-tl-10">
                                     <div className="flex-1">
                                         <p className="text-body-xs text-secondary">Destination</p>
                                         <input
                                             placeholder="Enter city, area or property name"
                                             value={destination}
-                                            onChange={(e) => setDestination(e.target.value)} // Fix: Add onChange
+                                            onChange={(e) => setDestination(e.target.value)} 
                                             className="w-full focus:outline-none bg-transparent text-body-xl font-medium"
                                         />
                                     </div>
@@ -146,21 +146,21 @@ const Hotel = () => {
                                 </div>
                             </div>
                             {/* Rooms & Guests */}
-                            <div className="flex-[0_0_17%] md:max-w-[250px] relative">
+                            <div className="flex-[0_0_17%] xl:max-w-[250px] relative">
                                 <div className="flex-1 flex-shrink-0 text-primary cursor-pointer bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px">
                                     <div className="flex-1">
                                         <p className="text-body-xs text-secondary">Rooms & Guests</p>
                                         <input
                                             placeholder="Select"
                                             value={roomsGuests}
-                                            onChange={(e) => setRoomsGuests(e.target.value)} // Fix: Add onChange
+                                            onChange={(e) => setRoomsGuests(e.target.value)} 
                                             className="w-full focus:outline-none bg-transparent text-body-xl font-medium"
                                         />
                                     </div>
                                 </div>
                             </div>
                             {/* Search Button */}
-                            <button className={`w-[194px] sm:w-full sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full flex items-center justify-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-1.5 rounded-r-lg rounded-l-none min-h-[50px] px-5 flex-shrink-0 ${styles['hover-move-right']}`}>
+                            <button className={`xl:w-[194px] sm:w-full sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full flex items-center justify-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-1.5 xl:rounded-r-lg xl:rounded-l-none min-h-[50px] px-5 flex-shrink-0 ${styles['hover-move-right']}`}>
                                 <div className="flex items-center gap-1.5 font-medium text-body-lg">
                                     Search
                                     <div className={`h-6 w-6 transform ${styles['animated-icon']}`}>

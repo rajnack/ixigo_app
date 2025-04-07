@@ -31,7 +31,7 @@ const Services = () => {
                 {/* Left Content */}
                 <div className="flex md:gap-x-[30px] sm:gap-x-[16px]">
                     {/* Logo */}
-                    <div className="z-10 md:w-[160px] md:h-[160px] sm:w-[115px] sm:h-[115px] object-cover">
+                    <div className="z-10 xl:w-[160px] xl:h-[160px] md:w-[135px] md:h-[130px] sm:w-[115px] sm:h-[115px] object-cover">
                         <Image
                             src="/images/ixigo-logo.png"
                             alt="Ixigo logo"
@@ -70,7 +70,7 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-x-[10px]">
-                            <div className="md:pt-[7px] md:pb-[7px] md:px-[8px] sm:pt-[2px] sm:pb-[2px] sm:px-[2px] flex flex-col items-center justify-center gap-[2px] rounded-[10px] bg-green-800">
+                            <div className="xl:pt-[7px] xl:pb-[7px] md:px-[8px] sm:pt-[2px] sm:pb-[2px] sm:px-[2px] flex flex-col items-center justify-center gap-[2px] rounded-[10px] bg-green-800">
                                 <p className="text-white text-body-xl">4.5</p>
                                 <p className="tracking-[2.4px] text-body2xs text-center text-white">RATING</p>
                             </div>
@@ -93,7 +93,7 @@ const Services = () => {
                         <p className="md:text-body-md sm:text-[10px] mb-[10px] px-[10px] font-medium">Download the App</p>
                         <div className="flex flex-col gap-[5px]">
                             <a href="#" aria-label="Download from Google Play">
-                                <div className="relative md:h-[47px] md:w-[158px] sm:h-[35px] sm:w-[115px]">
+                                <div className="relative xl:h-[47px] xl:w-[158px] md:h-[40px] md:w-[135px] sm:h-[35px] sm:w-[115px]">
                                     <Image
                                         src="/images/gpay.jpeg"
                                         alt="Google Play Store logo"
@@ -104,7 +104,7 @@ const Services = () => {
                                 </div>
                             </a>
                             <a href="#" aria-label="Download from App Store">
-                                <div className="relative md:h-[47px] md:w-[158px] sm:w-[115px] sm:h-[35px]">
+                                <div className="relative xl:h-[47px] xl:w-[158px] md:h-[41px] md:w-[135px] sm:w-[115px] sm:h-[35px]">
                                     <Image
                                         src="/images/appstore.jpeg"
                                         alt="Apple App Store logo"
@@ -118,7 +118,7 @@ const Services = () => {
                     </div>
                     {/* QR Code */}
                     <figure className="z-10 p-[10px] text-center">
-                        <div className="md:w-[140px] md:h-[140px] sm:w-[90px] sm:h-[90px]">
+                        <div className="xl:w-[140px] xl:h-[140px] sm:w-[90px] sm:h-[90px]">
                             <Image
                                 src="/images/qrcode.png"
                                 alt="Scan this QR code to download the app"

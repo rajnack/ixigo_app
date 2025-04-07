@@ -130,7 +130,7 @@ const Login = () => {
             </div>
             <div className="fixed z-[1300] inset-0 flex justify-center items-center !justify-end" aria-hidden="false">
                 <div className="fixed flex items-center justify-center inset-0 bg-black bg-opacity-50" aria-hidden="true">
-                    <div className="fixed top-0 left-0 h-screen w-[calc(100%-540px)] sm:hidden xl:block flex flex-col justify-center items-center">
+                    <div className="fixed top-[230] left-[440px] h-screen w-[calc(100%-540px)] sm:hidden xl:block flex flex-col justify-center items-center">
                         <Image src="/images/offerflight.png" alt="ixigo advantages" width="500" height="500" className="w-[620px]" />
                     </div>
                 </div>
