@@ -7,41 +7,41 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = () => {
     return (
         <div className=" flex items-center flex-col gap-y-10 bg-neutral-200 ">
-            <div className={` flex justify-between gap-x-[20px] py-20 wrapper`}>
+            <div className={` flex justify-between gap-x-[20px] py-20 wrapper sm:flex-row xxs:flex-col xxs:gap-[10px]`}>
                 <div className="flex flex-col gap-y-[10px] items-center xl:flex-row-reverse xl:gap-[26px] ">
                     <div className="flex items-center gap-x-4">
-                        <p className="text-body-3xs text-custom-gray text-center xl:list-item">
+                        <p className="text-body-3xs text-custom-gray text-center xl:list-item xxs:text-[10px]">
                             <a href="/ads">Advertise with us</a>
                         </p>
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item xxs:text-[10px]">
                             <a href="/about">About Us</a>
                         </p>
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item xxs:text-[10px]">
                             <a href="/investor">Investor Relations</a>
                         </p>
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item xxs:text-[10px]">
                             <a href="/about/csr">CSR</a>
                         </p>
                     </div>
                     <div className="flex items-center gap-x-4">
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xxs:text-[10px]">
                             <a href="/privacy">Privacy</a>
                         </p>
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item xxs:text-[10px]">
                             <a href="/terms-info">Terms of Use</a>
                         </p>
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item xxs:text-[10px]">
                             <a href="/careers">Career</a>
                         </p>
-                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item">
+                        <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center list-item xl:list-item xxs:text-[10px]">
                             <a href="/center">Customer Service</a>
                         </p>
                     </div>
-                    <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center">
+                    <p className="xl:text-[12px] md:text-[12px] sm:text-[10px] text-custom-gray text-center xxs:text-[10px]">
                         © 2025 Le Travenues Technology Ltd. India. All brands are trademarks of their respective owners.
                     </p>
                 </div>
-                <div className="flex justify-center md:gap-x-6 sm:gap-x-2 p-0.5">
+                <div className="flex justify-center md:gap-x-6 sm:gap-x-2 p-0.5 xxs:gap-[10px]">
                     <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                         <Image src="/images/facebook.svg" alt="facebook" width={40} height={40} className="md:w-[40px] md:h-[40px] sm:w-[50px] sm:h-[38px]" />
                     </a>

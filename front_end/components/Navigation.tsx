@@ -35,7 +35,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-20 px-0">
+        <ul className="flex justify-between text-base font-normal gap-20 px-0 xxs:gap-[10px]">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -44,7 +44,7 @@ const Navigation = () => {
                 >
                     <a
                         href={item.href}
-                        className="flex items-center gap-5 cursor-pointer"
+                        className="flex items-center gap-5 cursor-pointer sm:flex-row xxs:flex-col"
                     >
                         <div className="w-[60px] h-[60px] flex justify-center xl:w-auto">
                             <Image
@@ -56,7 +56,7 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
+                            <div className="inline-flex items-center md:block xxs:hidden font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
                                 <p className="text-body-2xs">{item.badge}</p>
                             </div>
                         )}
@@ -143,11 +143,11 @@ const NavPage = () => {
         setIsChecked((prev) => !prev);
     };
     return (
-        <div className="relative pt-[40px]">
+        <div className="relative pt-[40px] xxs:pt-[25px]">
             <HeaderPage />
-            <div className="px-7 z-20 flex justify-between items-center  relative">
+            <div className="px-7 z-20 flex justify-between items-center relative">
                 <Navigation />
-                <h1 className="lg:text-lg sm:text-sm text-custom-active sm:hidden md:block">Flight Booking</h1>
+                <h1 className="lg:text-lg sm:text-sm text-custom-active sm:hidden xxs:hidden md:block">Flight Booking</h1>
             </div>
             <div className="border-0 border-solid border-[#e5e7eb] box-border rounded-[20px] shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] p-7 flex flex-col gap-[10px] bg-white">
                 <div className="flex justify-between items-center">
@@ -157,8 +157,8 @@ const NavPage = () => {
                     <ScrollingInfoBox />
                 </div>
                 <div className="xl:flex xl:gap-0.5 xl:h-[60px]  ">
-                    <div className="relative flex gap-0.5 flex-1 border-b-1 border-neutral-300">
-                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none rounded-1-10 sm:rounded-bl-none sm:mb-0.5">
+                    <div className="relative flex gap-0.5 flex-1 border-b-1 border-neutral-300 xxs:flex-col smx:flex-row">
+                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none md:rounded-1-10 sm:rounded-bl-none xxs:rounded-bl-none xxs:rounded-tr-10 xxs:mb-0.5 sm:mb-0.5 smx:rounded-tr-none smx:mb-0">
                             <div className="flex justify-between items-center relative w-full h-full block">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
                                     <div className="flex items-center">
@@ -177,8 +177,8 @@ const NavPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none sm:rounded-tr-10">
-                            <div className="flex justify-between items-center relative w-full h-full pl-7 block sm:pl-0">
+                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none sm:rounded-tr-10 md:rounded-tr-none  smx:rounded-tr-10">
+                            <div className="flex justify-between items-center relative w-full h-full pl-7 block sm:pl-0 xxs:pl-0">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
                                     <div className="flex items-center">
                                         <div className="flex flex-col">
@@ -197,14 +197,14 @@ const NavPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between xl:border-none relative w-[320px] gap-0.5 overflow-visible calendarInput sm:w-full sm:border-b border-charcoal-400 ">
+                    <div className="flex items-center justify-between xl:border-none xxs:flex-col xl:w-[580px] smx:flex-row smx:w-[500px] xxs:mt-[5px] relative md:w-[320px] xxs:w-[250px] xs:w-[290px] xsm:w-[365px] gap-0.5 overflow-visible calendarInput sm:w-full sm:border-b border-charcoal-400 ">
                         <div className="bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over w-full">
                             <div className="flex justify-between items-center relative w-full h-[60px] justify-center border-b-4 lg:min-h-[60px] border-transparent">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4 ">
                                     <div className="flex items-center">
                                         <div className="flex flex-col">
-                                            <p className="body-xs text-custom-gray">Departure</p>
-                                            <p className="text-body-lg max-w-[190px] truncate text-custom-active  font-normal font-medium font-semibold">
+                                            <p className="text-body-2xs text-custom-gray">Departure</p>
+                                            <p className="text-body-lg xxs:text-[18px] md:max-w-[190px] truncate text-custom-active  font-normal font-medium font-semibold">
                                                 {currentDate || "16 Jan"}
                                             </p>
                                         </div>
@@ -226,15 +226,15 @@ const NavPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="relative overflow-visible">
-                        <div className="flex justify-between items-center relative w-[220px] bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over border-b-4 py-0.5 flex justify-center md:h-full h-full border-transparent sm:w-full sm:border-t-1 border-neutral-300">
-                            <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4 sm:pb-0">
+                    <div className="relative overflow-visible xxs:mt-[5px]">
+                        <div className="flex justify-between items-center relative md:h-[60px] xl:w-[280px] md:w-[220px] xxs:w-[250px] xs:w-[290px] xsm:w-[365px] smx:w-[500px] bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over border-b-4 py-0.5 flex justify-center md:h-[60px] border-transparent sm:w-full sm:border-t-1 border-neutral-300">
+                            <div className="flex-1 h-full flex flex-col justify-center md:py-2.5 sm:px-4 sm:pb-0">
                                 <div className="flex items-center !border-none">
                                     <div className="flex flex-col">
-                                        <p className="body-xs text-custom-gray">
+                                        <p className="text-body-2xs text-custom-gray">
                                             Travellers & Class
                                         </p>
-                                        <p className="text-body-lg max-w-[190px] truncate text-custom-active  font-normal font-medium font-semibold">
+                                        <p className="text-body-lg xxs:text-[18px] max-w-[190px] truncate text-custom-active  font-normal font-medium font-semibold">
                                             1 Traveller, Economy
                                         </p>
                                     </div>
@@ -244,16 +244,16 @@ const NavPage = () => {
                     </div>
                     <button
                         onClick={handleSearchClick}
-                        className="inline-flex justify-center items-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-[5px] rounded-[10px] min-h-[50px] text-2xl xl:w-[160px] px-[25px] pr-[15px] rounded-none rounded-r-[10px] sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full"
+                        className="inline-flex justify-center xxs:w-full md:text-body-xxl xxs:text-[20px] items-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-[5px] rounded-[10px] min-h-[50px] text-2xl xl:w-[200px] px-[25px] pr-[15px] md:rounded-none md:rounded-r-[10px] sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full xxs:rounded-10 xxs:rounded-tl-none xxs:rounded-tr-none xxs:w-full"
                     >
                         Search
                         <ChevronRight className="h-6 w-6" />
                     </button>
                 </div>
                 <div className="xl:flex xl:justify-between xl:items-center xl:border-none pb-0 pl-0 sm:flex-row sm:justify-between sm:items-center ">
-                    <div className="flex md:gap-4 !flex-row justify-start sm:mb-[10px] sm:gap-[5px]">
+                    <div className="flex md:gap-4 !flex-row justify-start sm:mb-[10px] sm:gap-[5px] xxs:gap-[10px] xxs:mb-[10px]">
                         <div className="flex gap-5 items-center relative">
-                            <p className="md:text-body-lg sm:text-body-sm flex text-custom-dark gap-[3px] font-bold">
+                            <p className="md:text-body-lg sm:text-body-sm flex text-custom-dark gap-[3px] font-bold xxs:text-[10px]">
                                 Special Fares
                                 <span className="font-normal text-custom-gray">
                                     (Optional)
@@ -261,7 +261,7 @@ const NavPage = () => {
                                 <span className="block text-custom-gray">:</span>
                             </p>
                         </div>
-                        <div className="flex md:gap-10 xl:gap-7 sm:gap-[5px]">
+                        <div className="flex md:gap-10 xl:gap-7 sm:gap-[5px] xxs:flex-col smx:flex-row xxs:gap-[10px]">
 
                             <div
                                 className={`relative text-custom-dark border-custom-dark h-[35px] icon-md text-body-sm inline-flex items-center font-normal rounded-full px-2 border border-solid shrink-0 ${activeType === "Student"
@@ -363,7 +363,7 @@ const NavPage = () => {
                                     <Check className="w-4 h-4 text-white" />
                                 )}
                             </span>
-                            <p className="text-body-lg sm:text-body-md ">Add hotel and save up to 50%</p>
+                            <p className="text-body-lg sm:text-body-md xxs:text-[14px]">Add hotel and save up to 50%</p>
                         </div>
                     </div>
                 </div>

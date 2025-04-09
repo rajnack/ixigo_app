@@ -139,7 +139,7 @@ const Questions = () => {
 
     return (
         <div className="px-[20px] py-[15px] border rounded-[20px] mt-[40px] xl:mt-[60px] xl:border-none xl:px-0 xl:p-0">
-            <h2 className="text-body-sm text-body-xl mr-[5px] xl:pb-[20px] font-bold">
+            <h2 className="text-body-sm md:text-body-xl mr-[5px] xl:pb-[20px] font-bold xxs:text-[18px]">
                 Frequently Asked Questions
             </h2>
             <div className="xl:rounded-[20px] xl:border xl:p-[20px] xl:py-0">
@@ -150,7 +150,7 @@ const Questions = () => {
                             onClick={() => toggleVisibility(index)}
                         >
                             <div className="flex-grow">
-                                <h3 className="text-body-xl font-bold sm:text-body-lg">{faq.question}</h3>
+                                <h3 className="md:text-body-xl font-bold sm:text-body-lg xxs:text-[16px]">{faq.question}</h3>
                             </div>
                             <div className={`transition-transform duration-150 justify-end ${openIndex === index ? "rotate-180" : ""}`}>
                                 <ChevronDown className="w-[1.7em] h-[1.7em]" />

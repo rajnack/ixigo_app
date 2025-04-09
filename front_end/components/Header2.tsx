@@ -33,7 +33,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-6 px-0 sm:gap-4">
+        <ul className="flex justify-between text-base font-normal gap-6 px-0 sm:gap-4 xxs:gap-[10px]">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -124,7 +124,7 @@ const HeaderPage = () => {
                     {/* Mobile Menu Icon (Visible on Small Screens) */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="absolute top-[25px] right-[1px] lg:hidden text-gray-700 hover:text-black focus:outline-none sm:right-[15px]"
+                        className="absolute top-[25px] right-[1px] xsm:right-[30px] lg:hidden text-gray-700 hover:text-black focus:outline-none sm:right-[15px]"
                     >
                         {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />} {/* Toggles Icon */}
                     </button>

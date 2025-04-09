@@ -4,7 +4,21 @@
     overflow: hidden; 
     position: relative;
 }
-
+@media screen and (max-width: 320px) {
+    .scrollingWordsContainer {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .scrollingWordsContainer {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    .scrollingWordsContainer {
+      display: none;
+    }
+  }
 .scrollingWordBox {
     display: flex;
     flex-direction: column;

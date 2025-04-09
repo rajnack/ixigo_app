@@ -93,13 +93,13 @@ const DoMoreWithIxigo = () => {
 
     return (
         <>
-            <div className="flex flex-col gap-25 mt-[60px] px-20 xl:px-0">
-                <h2 className="text-body-xl font-bold mb-[25px]">Do More With ixigo</h2>
+            <div className="flex flex-col gap-25 mt-[60px] xxs:mt-[30px] px-20 xl:px-0">
+                <h2 className="text-body-xl font-bold mb-[25px] xxs:text-[20px]">Do More With ixigo</h2>
                 <div className="flex justify-between relative overflow-x-auto scrollbar-hide pt-[30px] py-[20px] px-0 rounded-[20px] shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] items-center space-x-0">
                     <div className="relative w-full my-auto mx-0 ">
                         <div className="flex order-3 overflow-x-auto scrollbar-hide overscroll-x-contain snap-x-mandatory scroll-smooth no-scrollbar !gap-0 justify-between">
                             {features.map((feature, index) => (
-                                <div key={index} className="shrink-0 overflow-hidden rounded-xl md:max-w-[172px] sm:max-w-[156px] w-full flex flex-col items-center pax-10 border-r-[1px] last:border-r-0 border-customNeutral px-4 !rounded-none last:border-r-0">
+                                <div key={index} className="shrink-0 overflow-hidden rounded-xl md:max-w-[172px] sm:max-w-[156px] xxs:w-[140px] xs:w-[160px] xsm:w-[135px] w-full flex flex-col items-center pax-10 border-r-[1px] last:border-r-0 border-customNeutral px-4 !rounded-none last:border-r-0">
                                     <a href={feature.link} className="relative flex flex-col items-center min-w-[60px] text-center xl:hover:scale-[102%] inline-flex w-1/4 m-auto">
                                         <span className="flex flex-col items-center justify-center">
                                             <div style={{ width: feature.width, height: feature.height }}>
@@ -116,9 +116,9 @@ const DoMoreWithIxigo = () => {
                     </div>
                 </div>
 
-                <div className='pt-[35px]'>
-                    <div className='flex flex-col py-[35px] '>
-                        <h2 className='md:text-body-xxl font-bold sm:text-body-xl'>Today s Flight Offers</h2>
+                <div className='pt-[35px] xxs:pt-[20px]'>
+                    <div className='flex flex-col py-[35px] xxs:py-[20px]'>
+                        <h2 className='text-body-xxl font-bold xxs:text-[20px]'>Today s Flight Offers</h2>
                         <div className='relative w-full my-auto mx-0'>
                             <div className="flex order-3 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scrollbar-hide scroll-smooth no-scrollbar py-[10px] offers-carousel-gutter gap-[25px] proximity-scroll-snapping">
                                 {cards.slice(currentIndex, currentIndex + 12).map((card, index) => (
@@ -127,7 +127,7 @@ const DoMoreWithIxigo = () => {
                                         className="shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-100 xl:duration-300 xl:ease-out"
                                     >
                                         <Link href={`/offers/${card.id}`}>
-                                            <div className="xl:w-[364px] xl:h-[225px] rounded-20 object-cover cursor-pointer sm:w-[250px] sm:h-[180px]">
+                                            <div className="xl:w-[364px] xl:h-[225px] rounded-20 object-cover cursor-pointer sm:w-[250px] sm:h-[180px] xxs:w-[240px] xsm:w-[360px] xsm:h-[180px] xs:w-[280px] xxs:h-[150px] smx:w-[320px]">
                                                 <Image
                                                     src={card.image}
                                                     alt="cards"
@@ -146,21 +146,21 @@ const DoMoreWithIxigo = () => {
                                     className='flex order-1 mx-5 bg-transparent focus:outline-none absolute top-1/2 -translate-y-1/2 left-0 cursor-pointer'
                                     onClick={handlePrev}
                                 >
-                                    <div className='w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center text-blue-500 shadow-500 z-20 mb-15'>
+                                    <div className='md:w-[45px] md:h-[45px] xxs:w-[35px] xxs:h-[35px] bg-white rounded-full flex justify-center items-center text-blue-500 shadow-500 z-20 mb-15'>
                                         <ChevronLeft className='w-[2em] h-[2em]' />
                                     </div>
                                 </button>
                             )}
 
                             <button className='flex order-1 mx-5 bg-transparent focus:outline-none  absolute top-1/2 -translate-y-1/2 right-0 flex order-2 mx-5 bg-transparent focus:outline-none cursor-pointer' onClick={handleNext}>
-                                <div className='w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center text-center text-blue-500 shadow-500 z-20 mb-15 mr-10'>
+                                <div className='md:w-[45px] md:h-[45px] xxs:w-[35px] xxs:h-[35px] bg-white rounded-full flex justify-center items-center text-center text-blue-500 shadow-500 z-20 mb-15 mr-10'>
                                     <ChevronRight className='w-[2em] h-[2em]' />
                                 </div>
                             </button>
                             <div className='flex justify-center mt-4'>
                                 <div className='bg-customGray rounded-xl w-[40px] h-[5px] p-0 relative'>
                                     <div
-                                        className='w-[5px] h-[5px] bg-blue-500 rounded-fill absolute transition-transform duration-300'
+                                        className='w-[5px] h-[5px]  bg-blue-500 rounded-fill absolute transition-transform duration-300'
                                         style={{ transform: `translateX(${currentIndex * 10}px)` }}
                                     >
                                     </div>
@@ -168,13 +168,13 @@ const DoMoreWithIxigo = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='mt-[30px] xl:m-0 xl:pt-[30px] xl:pb-[20px]'>
-                        <h2 className='text-body-xl font-bold pl-[20px] xl:pl-0 xl:pb-[10px]'>Why Book With ixigo?</h2>
+                    <div className='mt-[30px] xl:m-0 xl:pt-[30px] xl:pb-[20px] xxs:mt-[20px]'>
+                        <h2 className='text-body-xl font-bold pl-[20px] xl:pl-0 xl:pb-[10px] xxs:text-[20px] xxs:pl-0'>Why Book With ixigo?</h2>
                         <div className='realtive w-full my-auto mx-0'>
                             <div className='flex order-3 overflow-x-auto scrollbar-hide overscroll-x-contain snap-x-mandatory scroll-smooth no-scrollbar py-[15px] gap-[20px]'>
                                 {imageCards.map((imageCard) => (
                                     <div key={imageCard.id} className='shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-100 xl:duration-300 xl:ease-out'>
-                                        <div className='md:w-[363px] md:h-[123px] rounded-20 object-cover sm:w-[280px] sm:h-[105px]'>
+                                        <div className='md:w-[363px] md:h-[123px] xxs:w-[250px] smx:w-[320px] xxs"h-[115px] xs:w-[280px] xsm:w-[360px] rounded-20 object-cover sm:w-[280px] sm:h-[105px]'>
                                             <Image
                                                 src={imageCard.image}
                                                 alt={imageCard.alt}

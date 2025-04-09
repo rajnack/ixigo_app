@@ -83,8 +83,8 @@ const BookFlight = () => {
                             const cityDate = cityDates.find((date) => date.cityId === city.id);
 
                             return (
-                                <div key={index} className="shrink-0 overflow-hidden rounded-xl flex flex-col border border-neutral-200 rounded-[20px] md:w-[352px] md:h-full sm:w-[280px] sm:h-[280px]">
-                                    <div className="relative h-[210px] w-full">
+                                <div key={index} className="shrink-0 overflow-hidden rounded-xl flex flex-col border border-neutral-200 rounded-[20px] md:w-[352px] md:h-full sm:w-[280px] sm:h-[280px] xxs:w-[265px] xxs:h-[265px] xs:w-[290px] xs:h-[290px] xsm:w-[365px] xsm:h-[295px] smx:w-[275px] smx:h-[270px]">
+                                    <div className="relative h-[210px] w-full xxs:h-[180px]">
                                         <Image
                                             src={city.image}
                                             alt="booking"
@@ -126,19 +126,21 @@ const BookFlight = () => {
                             );
                         })}
                     </div>
-                    <button
-                        className="flex order-1 mx-5 bg-transparent focus:outline-none absolute top-1/2 -translate-y-1/2 left-0"
-                        onClick={handlePrev}
-                    >
-                        <div className="w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center text-center text-blue-500 shadow-500 z-20 mb-15 mr-10">
-                            <ChevronLeft className="w-[2em] h-[2em]" />
-                        </div>
-                    </button>
+                    {currentIndex > 0 && (
+                        <button
+                            className='flex order-1 mx-5 bg-transparent focus:outline-none absolute top-1/2 -translate-y-1/2 left-0 cursor-pointer'
+                            onClick={handlePrev}
+                        >
+                            <div className='md:w-[45px] md:h-[45px] xxs:w-[35px] xxs:h-[35px] bg-white rounded-full flex justify-center items-center text-blue-500 shadow-500 z-20 mb-15'>
+                                <ChevronLeft className='w-[2em] h-[2em]' />
+                            </div>
+                        </button>
+                    )}
                     <button
                         className="flex order-1 mx-5 bg-transparent focus:outline-none absolute top-1/2 -translate-y-1/2 right-0"
                         onClick={handleNext}
                     >
-                        <div className="w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center text-center text-blue-500 shadow-500 z-20 mb-15 mr-10">
+                        <div className="md:w-[45px] md:h-[45px] xxs:w-[35px] xxs:h-[35px] bg-white rounded-full flex justify-center items-center text-center text-blue-500 shadow-500 z-20 mb-15 mr-10">
                             <ChevronRight className="w-[2em] h-[2em]" />
                         </div>
                     </button>

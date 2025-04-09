@@ -23,6 +23,12 @@ export default {
         'body-xxl': '24px',
         'body-xxxl': '28px',
       },
+      screens: {
+        'xxs': '320px',
+        'xs': '360px',
+        'xsm': '440px',
+        'smx': '580px',
+      },
       colors: {
         'custom-gray': '#5E616E',
         'custom-dark': '#17181C',
