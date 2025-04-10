@@ -56,7 +56,7 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center md:block xxs:hidden font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
+                            <div className="inline-flex items-center sm:block xxs:hidden font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
                                 <p className="text-body-2xs">{item.badge}</p>
                             </div>
                         )}
@@ -158,7 +158,7 @@ const NavPage = () => {
                 </div>
                 <div className="xl:flex xl:gap-0.5 xl:h-[60px]  ">
                     <div className="relative flex gap-0.5 flex-1 border-b-1 border-neutral-300 xxs:flex-col smx:flex-row">
-                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none md:rounded-1-10 sm:rounded-bl-none xxs:rounded-bl-none xxs:rounded-tr-10 xxs:mb-0.5 sm:mb-0.5 smx:rounded-tr-none smx:mb-0">
+                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none rounded-1-10 sm:rounded-bl-none xxs:rounded-bl-none xxs:rounded-tr-10 xxs:mb-0.5 sm:mb-0.5 smx:rounded-tr-none smx:mb-0">
                             <div className="flex justify-between items-center relative w-full h-full block">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
                                     <div className="flex items-center">
@@ -177,7 +177,7 @@ const NavPage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none sm:rounded-tr-10 md:rounded-tr-none  smx:rounded-tr-10">
+                        <div className="bg-gray-200 bg-opacity-40 flex items-center relative w-full h-[60px] hover:bg-neutral-subtle-over border-none xl:rounded-none sm:rounded-tr-10 md:rounded-tr-10  smx:rounded-tr-10">
                             <div className="flex justify-between items-center relative w-full h-full pl-7 block sm:pl-0 xxs:pl-0">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4">
                                     <div className="flex items-center">
@@ -197,7 +197,7 @@ const NavPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between xl:border-none xxs:flex-col xl:w-[580px] smx:flex-row smx:w-[500px] xxs:mt-[5px] relative md:w-[320px] xxs:w-[250px] xs:w-[290px] xsm:w-[365px] gap-0.5 overflow-visible calendarInput sm:w-full sm:border-b border-charcoal-400 ">
+                    <div className="flex items-center justify-between xl:border-none xxs:flex-col xl:w-[580px] md:w-[680px] smx:flex-row smx:w-[500px] sm:mt-0 xxs:mt-[5px] relative md:w-[320px] xxs:w-[250px] xs:w-[290px] xsm:w-[365px] gap-0.5 overflow-visible calendarInput sm:w-full sm:border-b border-charcoal-400 ">
                         <div className="bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over w-full">
                             <div className="flex justify-between items-center relative w-full h-[60px] justify-center border-b-4 lg:min-h-[60px] border-transparent">
                                 <div className="flex-1 h-full flex flex-col justify-center py-2.5 px-4 ">
@@ -226,8 +226,8 @@ const NavPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="relative overflow-visible xxs:mt-[5px]">
-                        <div className="flex justify-between items-center relative md:h-[60px] xl:w-[280px] md:w-[220px] xxs:w-[250px] xs:w-[290px] xsm:w-[365px] smx:w-[500px] bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over border-b-4 py-0.5 flex justify-center md:h-[60px] border-transparent sm:w-full sm:border-t-1 border-neutral-300">
+                    <div className="relative overflow-visible xl:mt-0 xxs:mt-[5px]">
+                        <div className="flex justify-between items-center relative md:h-[60px] xl:w-[280px] md:w-[680px] xxs:w-[250px] xs:w-[290px] xsm:w-[365px] smx:w-[500px] bg-gray-200 bg-opacity-40 hover:bg-neutral-subtle-over border-b-4 py-0.5 flex justify-center md:h-[60px] border-transparent sm:w-full sm:border-t-1 border-neutral-300">
                             <div className="flex-1 h-full flex flex-col justify-center md:py-2.5 sm:px-4 sm:pb-0">
                                 <div className="flex items-center !border-none">
                                     <div className="flex flex-col">
@@ -244,7 +244,7 @@ const NavPage = () => {
                     </div>
                     <button
                         onClick={handleSearchClick}
-                        className="inline-flex justify-center xxs:w-full md:text-body-xxl xxs:text-[20px] items-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-[5px] rounded-[10px] min-h-[50px] text-2xl xl:w-[200px] px-[25px] pr-[15px] md:rounded-none md:rounded-r-[10px] sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full xxs:rounded-10 xxs:rounded-tl-none xxs:rounded-tr-none xxs:w-full"
+                        className="inline-flex justify-center xxs:w-full md:text-body-xxl xxs:text-[20px] items-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-[5px]  min-h-[50px] text-2xl xl:w-[200px] px-[25px] pr-[15px] md:rounded-none xl:rounded-none xl:rounded-br-[10px] xl:rounded-tr-[10px] md:rounded-br-[10px] md:rounded-bl-[10px] sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full xxs:rounded-10 xxs:rounded-tl-none xxs:rounded-tr-none xxs:w-full"
                     >
                         Search
                         <ChevronRight className="h-6 w-6" />

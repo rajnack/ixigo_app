@@ -87,18 +87,18 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
                 <ul className="flex items-center my-[2px]">
                   <li>
                     <Link href="/" className="text-subbrand-500">
-                      <span className="overline-none">Home</span>
+                      <span className="overline-none xxs:text-[12px]">Home</span>
                     </Link>
                     <span className="overline-none mx-2">/</span>
                   </li>
                   <li>
                     <Link href="/offers" className="text-subbrand-500">
-                      <span className="overline-none">Offers</span>
+                      <span className="overline-none xxs:text-[12px]">Offers</span>
                     </Link>
                     <span className="overline-none mx-2">/</span>
                   </li>
                   <li>
-                    <span className="overline-none truncate sm:text-[14px]">
+                    <span className="overline-none truncate sm:text-[14px] xsm:text-[14px] xxs:text-[10px]">
                       {offer.title}
                     </span>
                   </li>
@@ -106,7 +106,7 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
               </nav>
             </div>
             <div className="flex flex-col lg:flex-row lg:gap-[20px] lg:mt-[40px] relative">
-              <div className="lg:w-[400px] lg:rounded-[20px] lg:bg-white lg:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] h-fit sm:mb-[20px]">
+              <div className="lg:w-[400px] lg:rounded-[20px] lg:bg-white lg:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] h-fit sm:mb-[20px] xxs:mb-[15px]">
                 <div className="lg:rounded-t-20 w-full h-[250px] lg:h-[179px] relative">
                   <Image
                     src={offer.image}
@@ -348,7 +348,7 @@ const FlightDetails = ({ id }: FlightDetailsProps) => {
                           alt="How to avail the offer?"
                           width="335"
                           height="300"
-                          className="w-[435px] h-[400px]"
+                          className="w-[435px] sm:h-[400px] xsm:h-[315px] xxs:h-[220px]"
                         />
                       </div>
                     )}

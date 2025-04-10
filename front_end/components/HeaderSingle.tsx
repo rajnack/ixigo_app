@@ -34,7 +34,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-6 px-0">
+        <ul className="flex justify-between text-base font-normal gap-6 px-0 [@media(width:1280px)]:gap-[10px]">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -55,7 +55,7 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-2 rounded-[10px]">
+                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-4px] left-[17px] px-2 rounded-[10px]">
                                 <p className="text-body-2xs">{item.badge}</p>
                             </div>
                         )}
@@ -110,7 +110,7 @@ const SingleHeader = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-end">
-                    <div className="flex items-center justify-center gap-[60px]">
+                    <div className="flex items-center justify-center gap-[60px] [@media(width:1280px)]:gap-[10px]">
                         {/* Offers Section */}
                         <div className="flex  items-center gap-[8px] cursor-pointer h-full relative">
                             <BadgePercent className=" w-6 h-6 text-blue-500" />

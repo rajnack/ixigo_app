@@ -130,21 +130,21 @@ const Login = () => {
             </div>
             <div className="fixed z-[1300] inset-0 flex justify-center items-center !justify-end" aria-hidden="false">
                 <div className="fixed flex items-center justify-center inset-0 bg-black bg-opacity-50" aria-hidden="true">
-                    <div className="fixed top-[230] left-[440px] h-screen w-[calc(100%-540px)] sm:hidden xl:block flex flex-col justify-center items-center">
+                    <div className="fixed top-[230] left-[440px] [@media(width:1280px)]:left-[130px] h-screen w-[calc(100%-540px)] sm:hidden xl:block flex flex-col justify-center items-center">
                         <Image src="/images/offerflight.png" alt="ixigo advantages" width="500" height="500" className="w-[620px]" />
                     </div>
                 </div>
                 <div className="bg-white flex flex-col outline-none overflow-y-auto max-h-full w-full h-full !rounded-none !w-[520px] relative">
                     <div className="w-[520px]">
-                        <Link href="/">
-                            <button
-                                className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-[2.5] !p-0 absolute top-[20px] right-[30px]"
-                                onClick={() => setIsModalVisible(false)}
-                            >
-                                <X className="h-2em w-2em text-charcoal-800 display:inline-block" />
-                            </button>
-                        </Link>
-                        <div className="fixed z-10 !rounded-t-[20px] !rounded-b-none !max-w-full bg-white w-[520px] sm:w-[460px] top-1/2 translate-y-[-50%]">
+                        <div className="fixed z-10 !rounded-t-[20px] !rounded-b-none !max-w-full bg-white w-[520px]  top-1/2 translate-y-[-50%]">
+                            <Link href="/">
+                                <button
+                                    className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-0.5 rounded-5 button-sm min-h-30px icon-md px-[2.5] !p-0 absolute top-[20px] right-[30px]"
+                                    onClick={() => setIsModalVisible(false)}
+                                >
+                                    <X className="h-2em w-2em text-charcoal-800 display:inline-block" />
+                                </button>
+                            </Link>
                             <div className="p-[30px]">
                                 <h5 className="text-body-xxl font-bold">Log in to ixigo</h5>
                                 <div className="login-form">

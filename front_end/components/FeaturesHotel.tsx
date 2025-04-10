@@ -1,7 +1,7 @@
 const Features = () => {
     return (
-        <div className="text-body-lg mt-[20px] pb-[10px] text-secondary [&_ol]:mx-[20px] [&_ol]:gap-y-[5px] [&_h2]:mt-[30px] [&_h2]:mb-[10px] [&_ol]:my-[20px]  [&_ol]:list-decimal [&_ol]:gap-y-[10px]">
-            <h2 className="text-body-xl">
+        <div className="sm:text-body-[16px] smx:text-[16px] xxs:text-[14px] mt-[20px] pb-[10px] text-secondary [&_ol]:mx-[20px] [&_ol]:gap-y-[5px] [&_h2]:mt-[30px] [&_h2]:mb-[10px] [&_ol]:my-[20px]  [&_ol]:list-decimal [&_ol]:gap-y-[10px]">
+            <h2 className="sm:text-body-[16px] smx:text-body-lg xxs:text-[16px]">
                 <strong>Online Hotel Booking with ixigo</strong>
             </h2>
             ixigo is a leading travel platform that ensures easy and hassle-free hotel bookings. With its user-friendly interface and extensive selection of hotels, the OTA enables travellers to find the perfect accommodation for their trips with just a few clicks.
@@ -9,7 +9,7 @@ const Features = () => {
             <br />
             Moreover, the platform provides an array of convenient features, including the ability to effortlessly share hotel wishlists, the flexibility to pay at the hotel, and 24x7 customer support to ensure a seamless experience for all travellers.
             <div>
-                <h2 className="md:text-body-lg ">
+                <h2 className="sm:text-body-lg ">
                     <strong>Why book hotels online with ixigo?</strong>
                 </h2>
                 ixigo has emerged as the go-to travel platform for train, flight, and bus bookings over the years. It has now expanded its services to offer online hotel booking to travellers. From luxury to budget-friendly accommodations, we ensure a safe and comfortable hotel stay experience across India and internationally.
@@ -52,7 +52,7 @@ const Features = () => {
             </ol>
             <p>
                 You can easily compare prices of several properties and read reviews before making a reservation. Booking budget-friendly hotels has never been simpler. </p>
-            <h2 className="text-body-lg"><strong>What are the best offers available for hotel booking on ixigo? </strong></h2>
+            <h2 className="sm:text-body-lg xxs:text-[16px]"><strong>What are the best offers available for hotel booking on ixigo? </strong></h2>
             <p>
                 ixigo provides the best prices on hotel room bookings. Additionally, we have multiple discount offers, promo codes and deals that can help you save even more on hotel prices. You can also get exclusive discounts and cashback on credit cards, debit cards and e-wallets. Check out our
                 <a href="#"> hotel offers </a>

@@ -27,11 +27,11 @@ const Services = () => {
                 />
             </div>
 
-            <div className="pt-[45px] pb-[45px] px-[90px] z-20 flex justify-between lg:px-[60px] sm:px-[30px]">
+            <div className="sm:pt-[45px] sm:pb-[45px] px-[90px] smx:px-[50px] xxs:px-[10px] xxs:pt-[10px] z-20 flex justify-between lg:px-[60px] sm:px-[30px] xxs:flex-col smx:flex-row">
                 {/* Left Content */}
-                <div className="flex md:gap-x-[30px] sm:gap-x-[16px]">
+                <div className="flex md:gap-x-[30px] sm:gap-x-[16px] xxs:gap-x-[15px]">
                     {/* Logo */}
-                    <div className="z-10 xl:w-[160px] xl:h-[160px] md:w-[135px] md:h-[130px] sm:w-[115px] sm:h-[115px] object-cover">
+                    <div className="z-10 xl:w-[160px] xl:h-[160px] md:w-[135px] md:h-[130px] sm:w-[115px] sm:h-[115px] smx:w-[80px] smx:h-[80px] xxs:w-[80px] xxs:h-[75px] object-cover">
                         <Image
                             src="/images/ixigo-logo.png"
                             alt="Ixigo logo"
@@ -43,7 +43,7 @@ const Services = () => {
                     </div>
                     {/* Features */}
                     <div className="flex flex-col gap-y-[20px] py-[10px]">
-                        <div className="flex flex-col gap-[10px]">
+                        <div className="flex flex-col gap-[10px] xxs">
                             <div className="flex items-center gap-[5px]">
                                 <span className="w-[24px] h-[24px]">
                                     <Image
@@ -54,7 +54,7 @@ const Services = () => {
                                         className="object-cover w-full h-full"
                                     />
                                 </span>
-                                <p className="md:text-body-lg sm:text-body-xs">Pay at hotel option available</p>
+                                <p className="md:text-body-lg sm:text-body-xs xxs:text-[10px]">Pay at hotel option available</p>
                             </div>
                             <div className="flex items-center gap-[5px]">
                                 <span className="w-[24px] h-[24px]">
@@ -66,13 +66,13 @@ const Services = () => {
                                         className="object-cover w-full h-full"
                                     />
                                 </span>
-                                <p className="md:text-body-lg sm:text-body-xs">Free cancellations on hotel bookings</p>
+                                <p className="md:text-body-lg sm:text-body-xs xxs:text-[10px]">Free cancellations on hotel bookings</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-x-[10px]">
-                            <div className="xl:pt-[7px] xl:pb-[7px] md:px-[8px] sm:pt-[2px] sm:pb-[2px] sm:px-[2px] flex flex-col items-center justify-center gap-[2px] rounded-[10px] bg-green-800">
-                                <p className="text-white text-body-xl">4.5</p>
-                                <p className="tracking-[2.4px] text-body2xs text-center text-white">RATING</p>
+                            <div className="xl:pt-[7px] xl:pb-[7px] md:px-[8px] sm:pt-[2px] sm:pb-[2px] sm:px-[2px] xxs:px-[5px] xxs:py-[5px] flex flex-col items-center justify-center gap-[2px] rounded-[10px] bg-green-800">
+                                <p className="text-white sm:text-body-xxl xxs:text-[16px]">4.5</p>
+                                <p className="tracking-[2.4px] sm:text-body2xs smx:text-[12px] xxs:text-[10px] text-center text-white">RATING</p>
                             </div>
                             <div className="w-[140px] h-[23px] object-cover">
                                 <Image
@@ -93,7 +93,7 @@ const Services = () => {
                         <p className="md:text-body-md sm:text-[10px] mb-[10px] px-[10px] font-medium">Download the App</p>
                         <div className="flex flex-col gap-[5px]">
                             <a href="#" aria-label="Download from Google Play">
-                                <div className="relative xl:h-[47px] xl:w-[158px] md:h-[40px] md:w-[135px] sm:h-[35px] sm:w-[115px]">
+                                <div className="relative xl:h-[47px] xl:w-[158px] md:h-[40px] md:w-[135px] sm:h-[35px] sm:w-[115px] smx:w-[90px] smx:h-[30px] xxs:w-[80px] xxs:h-[20px]">
                                     <Image
                                         src="/images/gpay.jpeg"
                                         alt="Google Play Store logo"
@@ -104,7 +104,7 @@ const Services = () => {
                                 </div>
                             </a>
                             <a href="#" aria-label="Download from App Store">
-                                <div className="relative xl:h-[47px] xl:w-[158px] md:h-[41px] md:w-[135px] sm:w-[115px] sm:h-[35px]">
+                                <div className="relative xl:h-[47px] xl:w-[158px] md:h-[41px] md:w-[135px] sm:w-[115px] sm:h-[35px] smx:w-[90px] smx:h-[30px] xxs:w-[80px] xxs:h-[20px]">
                                     <Image
                                         src="/images/appstore.jpeg"
                                         alt="Apple App Store logo"
@@ -118,7 +118,7 @@ const Services = () => {
                     </div>
                     {/* QR Code */}
                     <figure className="z-10 p-[10px] text-center">
-                        <div className="xl:w-[140px] xl:h-[140px] sm:w-[90px] sm:h-[90px]">
+                        <div className="xl:w-[140px] xl:h-[140px] sm:w-[90px] sm:h-[90px] smx:w-[75px] smx:h-[75px] xxs:w-[60px] xxs:h-[60px]">
                             <Image
                                 src="/images/qrcode.png"
                                 alt="Scan this QR code to download the app"

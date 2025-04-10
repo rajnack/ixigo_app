@@ -47,7 +47,7 @@ const PopularDestination = () => {
 
     return (
         <div className='flex flex-col py-[30px]'>
-            <h2 className='text-body-xl font-bold text-primary mb-[20px]'>Offers For You</h2>
+            <h2 className='text-body-xxl xxs:text-[20px] font-bold text-primary mb-[20px]'>Offers For You</h2>
             <div className='relative w-full my-auto mx-0'>
                 <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth gap-[20px]">
                     {destinations.slice(currentIndex, currentIndex + 12).map((destination, index) => (
@@ -58,7 +58,7 @@ const PopularDestination = () => {
                             <a href="destinations">
                                 <div className="max-w-[280px] w-full rounded-20 overflow-hidden">
                                     <div className="relative w-full overflow-hidden">
-                                        <div className='md:w-[280px] md:h-[340px] sm:w-[200px] sm:h-[260px] overflow-hidden rounded-[20px]'>
+                                        <div className='md:w-[280px] md:h-[340px] sm:w-[200px] sm:h-[260px] smx:w-[230px] smx:h-[240px] xxs:w-[210px] xxs:h-[230px] overflow-hidden rounded-[20px]'>
                                             <Image
                                                 src={destination.image}
                                                 alt="destination"
@@ -69,12 +69,12 @@ const PopularDestination = () => {
                                         </div>
 
                                         <div className="rounded-[20px] absolute bottom-0 left-0 right-0 top-0 flex flex-col justify-end px-[20px] py-[15px] bg-gradient-to-t from-black/70 via-transparent">
-                                            <h3 className="text-body-xxxl text-center text-white">{destination.title}</h3>
+                                            <h3 className="text-body-xxxl xxs:text-body-xxl text-center text-white">{destination.title}</h3>
                                             <p className="text-body-2xs text-center uppercase text-white">{destination.subtitle}</p>
                                         </div>
                                     </div>
                                     <div className="rounded-[10px] rounded-b-[20px] border-t-0 rounded-tl-none rounded-tr-none border border-primary px-[20px] pb-[15px] pt-[25px] flex items-center justify-center gap-x-[5px]">
-                                        <p className="text-body-lg text-primary">
+                                        <p className="text-body-lg text-primary xxs:text-[16px]">
                                             <strong className="font-bold">{destination.properties}</strong> Properties
                                         </p>
                                         <ArrowRight />
@@ -87,20 +87,24 @@ const PopularDestination = () => {
 
                 {currentIndex > 0 && (
                     <button
-                        className='flex order-1 mx-5 bg-transparent focus:outline-none absolute top-1/2 -translate-y-1/2 left-0 cursor-pointer'
+                        className='flex absolute top-1/2 -translate-y-1/2 left-0 bg-transparent focus:outline-none cursor-pointer z-20'
                         onClick={handlePrev}
                     >
-                        <div className='w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center text-blue-500 shadow-500 z-20 mb-15 mr-10'>
+                        <div className='md:w-[45px] md:h-[45px] xxs:w-[35px] xxs:h-[35px] bg-white rounded-full flex justify-center items-center text-blue-500 shadow-500 mr-10'>
                             <ChevronLeft className='w-[2em] h-[2em]' />
                         </div>
                     </button>
                 )}
 
-                <button className='flex order-1 mx-5 bg-transparent focus:outline-none  absolute top-1/2 -translate-y-1/2 right-0 flex order-2 mx-5 bg-transparent focus:outline-none cursor-pointer' onClick={handleNext}>
-                    <div className='w-[45px] h-[45px] bg-white rounded-full flex justify-center items-center text-center text-blue-500 shadow-500 z-20 mb-15 mr-10'>
+                <button
+                    className='flex absolute top-1/2 -translate-y-1/2 right-0 bg-transparent focus:outline-none cursor-pointer z-20'
+                    onClick={handleNext}
+                >
+                    <div className='md:w-[45px] md:h-[45px] xxs:w-[35px] xxs:h-[35px]  bg-white rounded-full flex justify-center items-center text-blue-500 shadow-500 mr-10'>
                         <ChevronRight className='w-[2em] h-[2em]' />
                     </div>
                 </button>
+
                 <div className='flex justify-center mt-4'>
                     <div className='bg-customGray rounded-xl w-[40px] h-[5px] p-0 relative'>
                         <div

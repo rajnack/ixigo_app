@@ -40,7 +40,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-20 px-0">
+        <ul className="flex justify-between text-base font-normal gap-20 px-0 xxs:gap-[10px]">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -49,7 +49,7 @@ const Navigation = () => {
                 >
                     <a
                         href={item.href}
-                        className="flex items-center gap-5 cursor-pointer"
+                        className="flex items-center gap-5 cursor-pointer sm:flex-row xxs:flex-col"
                     >
                         <div className="w-[50px] flex justify-center xl:w-auto">
                             <Image
@@ -61,7 +61,7 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
+                            <div className="inline-flex items-center sm:block xxs:hidden font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-[5px]  rounded-[10px]">
                                 <p className="xl:text-body-2xs sm:text-[10px]">{item.badge}</p>
                             </div>
                         )}
@@ -96,20 +96,20 @@ const Hotel = () => {
                 <div className="hom-container">
                     <div className="px-7 z-20 flex justify-between items-center gap-10 relative">
                         <Navigation />
-                        <h1 className="text-body-lg text-custom-active text-primary sm:hidden">Cheap Hotel Booking Online</h1>
+                        <h1 className="text-body-lg text-custom-active text-primary sm:hidden xxs:hidden md:block">Cheap Hotel Booking Online</h1>
                     </div>
                     <div className="rounded-[20px] bg-text-primary p-[20px] shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)]">
-                        <div className="z-20 flex xl:flex-row gap-1 sm:flex-col">
+                        <div className="z-20 flex xl:flex-row gap-1 sm:flex-col xxs:flex-col">
                             {/* Destination */}
                             <div className="flex-1 flex-shrink-0 text-primary relative">
-                                <div className="flex-1 flex-shrink-0 text-primary cursor-pointer xl:rounded-1-10 bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px sm:rounded-bl-none sm:rounded-tr-10 sm:rounded-tl-10">
+                                <div className="flex-1 flex-shrink-0 text-primary cursor-pointer xl:rounded-1-10 bg-neutral-40 pt-[10px] border-transparent flex cursor-pointer px-[15px] pb-[7px] border-bottom-width:3px sm:rounded-bl-none sm:rounded-tr-10 sm:rounded-tl-10 xxs:rounded-tl-10 xxs:rounded-tr-10">
                                     <div className="flex-1">
                                         <p className="text-body-xs text-secondary">Destination</p>
                                         <input
                                             placeholder="Enter city, area or property name"
                                             value={destination}
                                             onChange={(e) => setDestination(e.target.value)} 
-                                            className="w-full focus:outline-none bg-transparent text-body-xl font-medium"
+                                            className="w-full focus:outline-none bg-transparent sm:text-body-xl xxs:text-body-lg font-medium"
                                         />
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@ const Hotel = () => {
                                             selected={checkInDate}
                                             onChange={(date) => setCheckInDate(date)}
                                             dateFormat="EEE, dd MMM"
-                                            className="w-full focus:outline-none bg-transparent text-body-xl font-medium"
+                                            className="w-full focus:outline-none bg-transparent sm:text-body-xl xxs:text-body-lg font-medium"
                                         />
                                     </div>
                                 </div>
@@ -134,7 +134,7 @@ const Hotel = () => {
                                             selected={checkOutDate}
                                             onChange={(date) => setCheckOutDate(date)}
                                             dateFormat="EEE, dd MMM"
-                                            className="w-full focus:outline-none bg-transparent text-body-xl font-medium"
+                                            className="w-full focus:outline-none bg-transparent sm:text-body-xl xxs:text-body-lg font-medium"
                                             minDate={checkInDate}
                                             readOnly
                                             showPopperArrow={true}
@@ -154,13 +154,13 @@ const Hotel = () => {
                                             placeholder="Select"
                                             value={roomsGuests}
                                             onChange={(e) => setRoomsGuests(e.target.value)} 
-                                            className="w-full focus:outline-none bg-transparent text-body-xl font-medium"
+                                            className="w-full focus:outline-none bg-transparent sm:text-body-xl xxs:text-body-lg font-medium"
                                         />
                                     </div>
                                 </div>
                             </div>
                             {/* Search Button */}
-                            <button className={`xl:w-[194px] sm:w-full sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none sm:w-full flex items-center justify-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-1.5 xl:rounded-r-lg xl:rounded-l-none min-h-[50px] px-5 flex-shrink-0 ${styles['hover-move-right']}`}>
+                            <button className={`xl:w-[194px] sm:w-full sm:rounded-10 sm:rounded-tl-none sm:rounded-tr-none xxs:rounded-bl-10 xxs:rounded-br-10 sm:w-full flex items-center justify-center bg-[#fc790d] text-white hover:bg-[#f5871d] gap-1.5 xl:rounded-r-lg xl:rounded-l-none min-h-[50px] px-5 flex-shrink-0 ${styles['hover-move-right']}`}>
                                 <div className="flex items-center gap-1.5 font-medium text-body-lg">
                                     Search
                                     <div className={`h-6 w-6 transform ${styles['animated-icon']}`}>

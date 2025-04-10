@@ -69,7 +69,7 @@ export default function HotelsList() {
     return (
         <div className=''>
             <div className='flex flex-col py-[30px]'>
-                <h2 className='text-body-xl font-bold text-primary mb-[20px]'>Offers For You</h2>
+                <h2 className='text-body-xxl xxs:text-[20px] font-bold text-primary mb-[20px]'>Offers For You</h2>
                 <div className='relative w-full my-auto mx-0'>
                     <div className="flex order-3 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scrollbar-hide scroll-smooth no-scrollbar py-[10px] offers-carousel-gutter gap-[25px] proximity-scroll-snapping">
                         {items.slice(currentIndex, currentIndex + 12).map((item, index) => (
@@ -78,7 +78,7 @@ export default function HotelsList() {
                                 className="shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] xl:duration-300 xl:ease-out"
                             >
                                 <Link href={`/offers/${item.id}`}>
-                                    <div className='md:w-[364px] md:h-[225px] sm:w-[280px] sm:h-[180px] rounded-20 object-cover'>
+                                    <div className='md:w-[364px] md:h-[225px] sm:w-[280px] sm:h-[180px] xxs:w-[240px] xxs:h-[150px] smx:w-[260px] smx:h-[160px] rounded-20 object-cover'>
                                         <Image
                                             src={item.image}
                                             alt={item.alt}
@@ -123,7 +123,7 @@ export default function HotelsList() {
             </div>
 
             <div className='mt-[30px] xl:m-0 xl:pt-[30px] xl:pb-[20px]'>
-                <h2 className='text-body-xl font-bold  text-primary mb-[20px]'>Why Book Hotels With ixigo?</h2>
+                <h2 className='text-body-xxl xxs:text-[20px] font-bold  text-primary mb-[20px]'>Why Book Hotels With ixigo?</h2>
                 <div className='relative w-full my-auto mx-0'>
                     <div className='flex order-3 overflow-x-auto overscroll-x-contain snap-x-mandatory scroll-smooth scrollbar-hide no-scrollbar  gap-[20px]'>
                         {services.slice(currentIndex, currentIndex + 5).map((service) => (
@@ -131,7 +131,7 @@ export default function HotelsList() {
                                 key={service.id}
                                 className="shrink-0 overflow-hidden rounded-xl last:mr-20 first:ml-20 xl:first:ml-0 xl:rounded-20 xl:transition-all xl:duration-300 xl:ease-in xl:hover:shadow-[0px_4px_30px_-5px_rgba(0,_0,_0,_0.25)] xl:duration-300 xl:ease-out"
                             >
-                                <div className='md:w-[363px] md:h-[123px] sm:w-[280px] sm:h-[110px] rounded-20 object-cover'>
+                                <div className='md:w-[363px] md:h-[123px] sm:w-[280px] sm:h-[110px] smx:w-[300px] smx:h-[100px] xxs:w-[260px] xxs:h-[90px] rounded-20 object-cover'>
                                     <Image
                                         src={service.image}
                                         alt={service.alt}

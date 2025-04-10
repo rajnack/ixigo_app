@@ -141,46 +141,46 @@ const FlightRoutes = () => {
                     ))}
                 </div>
                 <div className="border-t border-t-[rgb(214_215_219)]"></div>
-                <div className="px-[20px] py-[30px] xl:py-[20px] xl:px-0">
-                    <p className="text-body-xs text-secondary font-medium">Important Links</p>
+                <div className="px-[20px] py-[30px] xl:py-[20px] sm:px-0 xxs:px-0 xxs:py-[20px] sm:py-[20px] xl:px-0">
+                    <p className="md:text-body-xs text-secondary font-medium sm:text-[12px] xxs:text-[10px]">Important Links</p>
                     <div className="flex flex-wrap gap-x-[20px] pt-[10px] xl:pt-[5px] x:gap-0">
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Indigo Flight Status</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Air India Flight Status</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Spicejet Flight Status</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Flight Status</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Vistara Flight Status</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Student Flight Booking</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Senior Citizen Flight Booking</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Armed Forces Flight Booking</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Air India Express Flight Status</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">International Flights</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Flights Offers</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Travel Stories</a>
                         </p>
-                        <p className="text-body-xs text-secondary pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
+                        <p className="md:text-body-xs text-secondary sm:text-[10px] xxs:text-[10px] pb-[5px] mr-[5px] mt-[10px] xl:mt-0 xl:py-[5px] xl:pr-[10px] xl:text-[12px]">
                             <a href="flight status">Responsible Disclosure</a>
                         </p>
                     </div>

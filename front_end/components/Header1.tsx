@@ -96,7 +96,7 @@ const Header = () => {
                                     </div>
                                     <button
                                         onClick={handleAuth}
-                                        className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark body-md"
+                                        className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 xxs:pr-0 hover:bg-white text-custom-dark body-md"
                                     >
                                         {isLoggedIn ? "Logout" : "Log in/Sign up"}
                                     </button>

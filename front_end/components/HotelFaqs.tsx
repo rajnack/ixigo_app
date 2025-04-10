@@ -61,7 +61,7 @@ const BookingFaqs = () => {
 
     return (
         <div className="border rounded-[20px] pt-[30px] xl:border-none ">
-            <h2 className="text-body-sm text-body-xl mr-[5px] xl:pb-[20px] font-bold">Hotel Booking FAQs</h2>
+            <h2 className="text-body-sm md:text-body-xl mr-[5px] xl:pb-[20px] font-bold">Hotel Booking FAQs</h2>
             <div className="xl:rounded-[20px] mt-[15px] xl:border xl:px-[20px] xl:py-[15px]">
                 {faqData.map((faq, index) => (
                     <div key={index} className="border-b border-tertiary last-of-type:border-b-transparent pt-[20px]">
@@ -70,7 +70,7 @@ const BookingFaqs = () => {
                             onClick={() => toggleVisibility(index)}
                         >
                             <div className="flex-grow">
-                                <h3 className="text-body-xl font-bold">{faq.question}</h3>
+                                <h3 className="sm:text-body-xl font-bold smx:text-body-lg xxs:text-[16px]">{faq.question}</h3>
                             </div>
                             <div
                                 className={`transition-transform duration-150 justify-end ${openIndex === index ? "rotate-180" : ""}`}
