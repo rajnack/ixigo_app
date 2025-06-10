@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, BadgePercent, Headset, Menu, X } from "lucide-react";
 import { useSession, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+
 
 const Navigation = () => {
     const navItems = [
@@ -72,19 +74,34 @@ const Navigation = () => {
 
 const HeaderHotel = () => {
     const [isVisible, setIsVisible] = useState(false);
-
+    const router = useRouter();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const { data: session } = useSession();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsVisible(window.scrollY > 100);
+
+            const token = localStorage.getItem("token");
+            setIsLoggedIn(!!token);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+    
+    const handleAuth = () => {
+        if (isLoggedIn) {
 
+            localStorage.removeItem("token");
+            setIsLoggedIn(false);
+            router.push("/hotels");
+        } else {
+
+            router.push("/login1");
+        }
+    };
     return (
         <div
             className={`bg-white border-b border-neutral-100 !py-0 w-full fixed left-0 duration-300 ease-in-out ${isVisible ? "top-0" : "-top-[120px]"
@@ -158,7 +175,7 @@ const HeaderHotel = () => {
                                         <p className="text-custom-dark body-md ml-2">{session.user.name}</p>
                                         <button
                                             onClick={() => signOut()}
-                                            className="ml-4 inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark text-xl"
+                                            className="ml-4 inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark body-md"
                                         >
                                             Log Out
                                         </button>
@@ -175,8 +192,11 @@ const HeaderHotel = () => {
                                                     width={24}
                                                 />
                                             </div>
-                                            <button className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark body-md">
-                                                Log in/Sign up
+                                            <button
+                                                onClick={handleAuth}
+                                                className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 xxs:pr-0 hover:bg-white text-custom-dark body-md"
+                                            >
+                                                {isLoggedIn ? "Logout" : "Log in/Sign up"}
                                             </button>
                                         </div>
                                     </Link>
@@ -204,27 +224,43 @@ const HeaderHotel = () => {
 
                                 {/* Avatar and Login/Signup */}
                                 {session ? (
-                                    <div className="flex flex-col items-start">
-                                        <Image
-                                            src={session?.user?.image || '/images/profile.jpg'}
-                                            alt="user-avatar"
-                                            className="cursor-pointer rounded-full"
-                                            height={40}
-                                            width={40}
-                                        />
-                                        <p className="text-custom-dark body-md mt-2">{session.user.name}</p>
+                                    <div className="flex items-center justify-between md:justify-end transition-all duration-100 ease-in-out">
+                                        <div className="rounded-full flex justify-center items-center w-[40px] h-[40px] bg-sky-200">
+                                            <Image
+                                                src={session?.user?.image || '/images/profile.jpg'}
+                                                alt="user-avatar"
+                                                className="cursor-pointer rounded-full"
+                                                height={40}
+                                                width={40}
+                                            />
+                                        </div>
+                                        <p className="text-custom-dark body-md ml-2">{session.user.name}</p>
                                         <button
                                             onClick={() => signOut()}
-                                            className="mt-4 text-brand hover:bg-brand-over rounded-10 min-h-[40px] px-6 text-custom-dark text-xl"
+                                            className="ml-4 inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark body-md"
                                         >
                                             Log Out
                                         </button>
                                     </div>
                                 ) : (
                                     <Link href="/login1">
-                                        <button className=" text-brand hover:bg-brand-over rounded-10 min-h-[40px] px-6 text-custom-dark body-md">
-                                            Log in/Sign up
-                                        </button>
+                                        <div className="flex items-center justify-between md:justify-end transition-all duration-100 ease-in-out">
+                                            <div className="rounded-full flex justify-center items-center w-[40px] h-[40px] bg-sky-200">
+                                                <Image
+                                                    src="/images/account.svg"
+                                                    alt="user-avatar"
+                                                    className="cursor-pointer"
+                                                    height={24}
+                                                    width={24}
+                                                />
+                                            </div>
+                                            <button
+                                                onClick={handleAuth}
+                                                className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 xxs:pr-0 hover:bg-white text-custom-dark body-md"
+                                            >
+                                                {isLoggedIn ? "Logout" : "Log in/Sign up"}
+                                            </button>
+                                        </div>
                                     </Link>
                                 )}
                             </div>

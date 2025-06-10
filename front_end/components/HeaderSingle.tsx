@@ -145,7 +145,7 @@ const SingleHeader = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-end">
-                    <div className="flex items-center justify-center gap-[60px]">
+                    <div className="flex items-center justify-center gap-[30px]">
                         {/* Offers Section */}
                         <div className="flex  items-center gap-[8px] cursor-pointer h-full relative">
                             <BadgePercent className=" w-6 h-6 text-blue-500" />
