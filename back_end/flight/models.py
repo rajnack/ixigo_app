@@ -116,3 +116,24 @@ class FlightOffer(models.Model):
         return f"{self.title} ({self.code})"    
 
  
+
+
+class FlightInfo(models.Model):  
+    airline = models.CharField(max_length=100)
+    departure = models.CharField(max_length=100)  
+    arrival = models.CharField(max_length=100)    
+    departure_time = models.TimeField()
+    arrival_time = models.TimeField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+
+    def __str__(self):
+        return f"{self.airline}: {self.departure} → {self.arrival}"
+
+
+class Booking(models.Model):
+    flight = models.ForeignKey(FlightInfo, on_delete=models.CASCADE, related_name="bookings")
+    passenger_name = models.CharField(max_length=100)
+    booking_date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.passenger_name} booked {self.flight}"

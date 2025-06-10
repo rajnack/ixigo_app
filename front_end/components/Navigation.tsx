@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import axios from 'axios';
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import ScrollingInfoBox from "./Scrolling";
 import TripSelector from "./TripSelector";
-import { ChevronRight, Check, CircleX } from "lucide-react";
+import { ChevronRight, Check, CircleX, ChevronLeft } from "lucide-react";
 import HeaderPage from "./Header2";
 
 
@@ -77,6 +79,8 @@ const NavPage = () => {
     const [from, setFrom] = useState<string>("");
     const [to, setTo] = useState<string>("");
     const [showPopup, setShowPopup] = useState<boolean>(false);
+    const [flights, setFlights] = useState<any[]>([]);
+    const [bookingSuccess, setBookingSuccess] = useState<boolean>(false);
 
     const [hovered, setHovered] = useState<string>("");
     const [activeType, setActiveType] = useState<string>("");
@@ -93,15 +97,88 @@ const NavPage = () => {
     }, []);
 
 
-    const handleSearchClick = () => {
+    const handleSearchClick = async () => {
         if (from.trim() && to.trim()) {
-            setShowPopup(true);
-            setTimeout(() => setShowPopup(false), 2000);
-            setFrom("");
-            setTo("");
+            try {
+                const response = await axios.get('http://127.0.0.1:8000/api/v1/flight/flight-info/', {
+                    params: {
+                        from: from,
+                        to: to
+                    }
+                });
+
+                const flightsData = response.data.data;
+
+                if (!flightsData || flightsData.length === 0) {
+                    setShowPopup(true);
+                    setTimeout(() => setShowPopup(false), 2000);
+                } else {
+                    setFlights(flightsData);
+                }
+                // Clear the inputs after search
+                setFrom("");
+                setTo("");
+            } catch (error) {
+                console.error('Error fetching flights:', error);
+            }
         } else {
-            console.log("Both inputs are required.");
+            console.log('Both inputs are required.');
         }
+    };
+    const router = useRouter();
+
+    const isTokenExpired = (token: string): boolean => {
+        try {
+            const payload = JSON.parse(atob(token.split('.')[1]));
+            const currentTime = Math.floor(Date.now() / 1000);
+            return payload.exp < currentTime;
+        } catch {
+            return true;
+        }
+    };
+
+    const handleBookFlight = async (flightId: number) => {
+        const token = localStorage.getItem("token");
+
+        if (!token || isTokenExpired(token)) {
+            alert("Please login first.");
+            router.push("/login");
+            return;
+        }
+
+        try {
+            const res = await fetch("http://localhost:8000/api/v1/flight/bookings/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
+                },
+                body: JSON.stringify({ flight: flightId }),
+            });
+
+            if (res.ok) {
+
+                setBookingSuccess(true);
+
+                setFrom("");
+                setTo("");
+                setFlights([]);
+
+                setTimeout(() => setBookingSuccess(false), 3000);
+            } else {
+                const errorData = await res.json();
+                console.error("Booking failed:", errorData);
+                alert("Booking failed: " + (errorData.detail || "Unknown error"));
+            }
+        } catch (err) {
+            console.error("Booking error:", err);
+        }
+    };
+
+    const handleBackClick = () => {
+        setFlights([]);
+        setFrom("");
+        setTo("");
     };
 
 
@@ -249,6 +326,70 @@ const NavPage = () => {
                         Search
                         <ChevronRight className="h-6 w-6" />
                     </button>
+                    {showPopup && (
+                        <div className="absolute top-[60%] left-[50%] transform -translate-x-1/2 bg-white p-6 rounded-xl shadow-2xl transition-all duration-300 ease-in-out opacity-100 scale-105">
+                            <div className="flex justify-center items-center flex-col">
+                                <div className="bg-red-500 text-white text-xl font-semibold p-3 rounded-full mb-4">
+                                    <p>⚠️</p>
+                                </div>
+                                <p className="text-xl text-center font-medium text-gray-800">
+                                    Flights Is Not Available
+                                </p>
+                            </div>
+                        </div>
+                    )}
+                    {flights.length > 0 && (
+                        <div className="mt-6">
+                            <div className="flex items-center gap-4 mb-4">
+                                <button
+                                    onClick={handleBackClick}
+                                    className="flex items-center gap-2 text-gray-600 hover:text-gray-800"
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </button>
+                                <h2 className="text-xl font-semibold">Available Flights</h2>
+                            </div>
+                            <ul className="space-y-4">
+                                {flights.map((flight) => (
+                                    <li key={flight.id} className="p-4 border rounded-lg shadow-sm bg-white">
+                                        <div className="flex justify-between">
+                                            <div>
+                                                <p className="font-medium">{flight.airline}</p>
+                                                <p>{flight.departure} → {flight.arrival}</p>
+                                            </div>
+                                            <div>
+                                                <p>{flight.departure_time} - {flight.arrival_time}</p>
+                                                <p className="font-semibold text-green-600">₹{flight.price}</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex gap-2 mt-2">
+                                            <button
+                                                className="flex items-center gap-1 bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600"
+                                                onClick={() => handleBackClick()}
+                                            >
+                                                <ChevronLeft className="h-4 w-4" />
+                                                Back
+                                            </button>
+                                            <button
+                                                className="bg-[#fc790d] text-white py-2 px-4 rounded hover:bg-[#f5871d]"
+                                                onClick={() => handleBookFlight(flight.id)}
+                                            >
+                                                Book Now
+                                            </button>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                    {bookingSuccess && (
+                        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white px-8 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-fade-in">
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="text-lg font-semibold">Booking successful!</span>
+                        </div>
+                    )}
                 </div>
                 <div className="xl:flex xl:justify-between xl:items-center xl:border-none pb-0 pl-0 sm:flex-row sm:justify-between sm:items-center ">
                     <div className="flex md:gap-4 !flex-row justify-start sm:mb-[10px] sm:gap-[5px] xxs:gap-[10px] xxs:mb-[10px]">
@@ -367,18 +508,6 @@ const NavPage = () => {
                         </div>
                     </div>
                 </div>
-                {showPopup && (
-                    <div className="absolute top-[60%] left-[50%] transform -translate-x-1/2 bg-white p-6 rounded-xl shadow-2xl transition-all duration-300 ease-in-out opacity-100 scale-105">
-                        <div className="flex justify-center items-center flex-col">
-                            <div className="bg-red-500 text-white text-xl font-semibold p-3 rounded-full mb-4">
-                                <p>⚠️</p>
-                            </div>
-                            <p className="text-xl text-center font-medium text-gray-800">
-                                Data empty
-                            </p>
-                        </div>
-                    </div>
-                )}
             </div>
         </div>
     );

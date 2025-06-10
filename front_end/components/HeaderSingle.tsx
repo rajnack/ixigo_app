@@ -1,11 +1,11 @@
 "use client"
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, BadgePercent, Headset } from "lucide-react";
 import { useSession, signOut } from "next-auth/react";
-
-
+import { useRouter } from "next/navigation";
 
 const Navigation = () => {
     const navItems = [
@@ -19,7 +19,6 @@ const Navigation = () => {
             href: "/hotels",
             src: "/images/hotel.svg",
             label: "Hotels",
-            badge: "Up to 50% Off",
         },
         {
             href: "/trains",
@@ -34,7 +33,7 @@ const Navigation = () => {
     ];
 
     return (
-        <ul className="flex justify-between text-base font-normal gap-6 px-0 [@media(width:1280px)]:gap-[10px]">
+        <ul className="flex justify-between text-base font-normal gap-6 px-0">
             {navItems.map((item, index) => (
                 <li
                     key={index}
@@ -55,7 +54,7 @@ const Navigation = () => {
                             />
                         </div>
                         {item.badge && (
-                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-4px] left-[17px] px-2 rounded-[10px]">
+                            <div className="inline-flex items-center font-normal bg-custom-purple text-white absolute top-[-9px] left-[17px] px-2 rounded-[10px]">
                                 <p className="text-body-2xs">{item.badge}</p>
                             </div>
                         )}
@@ -70,11 +69,47 @@ const Navigation = () => {
     );
 };
 
+interface User {
+    name: string;
+    email: string;
+    image: string;
+}
+
+interface Session {
+    user: User;
+    expires: string;
+}
+
 const SingleHeader = () => {
-    // const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
-    const { data: session } = useSession();
+    const { data: session } = useSession<Session>();
+    const router = useRouter();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        setIsLoggedIn(!!token);
+
+        const handleScroll = () => {
+            setIsVisible(window.scrollY > 100);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const handleAuth = () => {
+        if (isLoggedIn) {
+
+            localStorage.removeItem("token");
+            setIsLoggedIn(false);
+            router.push("/");
+        } else {
+
+            router.push("/login");
+        }
+    };
 
     return (
         <div
@@ -110,7 +145,7 @@ const SingleHeader = () => {
                     </div>
                 </div>
                 <div className="flex items-center justify-end">
-                    <div className="flex items-center justify-center gap-[60px] [@media(width:1280px)]:gap-[10px]">
+                    <div className="flex items-center justify-center gap-[60px]">
                         {/* Offers Section */}
                         <div className="flex  items-center gap-[8px] cursor-pointer h-full relative">
                             <BadgePercent className=" w-6 h-6 text-blue-500" />
@@ -137,12 +172,12 @@ const SingleHeader = () => {
                                     <Image
                                         src={session?.user?.image || '/images/profile.jpg'}
                                         alt="user-avatar"
-                                        className="cursor-pointer rounded-full"
                                         height={40}
                                         width={40}
+                                        className="object-cover w-full h-full md:block cursor-pointer rounded-full"
                                     />
                                 </div>
-                                <p className="text-custom-dark text-xl ml-2">{session.user.name}</p>
+                                <p className="text-custom-dark body-md ml-2">{session.user.name}</p>
                                 <button
                                     onClick={() => signOut()}
                                     className="ml-4 inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark text-xl"
@@ -151,7 +186,7 @@ const SingleHeader = () => {
                                 </button>
                             </div>
                         ) : (
-                            <Link href="/login1">
+                            <Link href="/login">
                                 <div className="flex items-center justify-between md:justify-end transition-all duration-100 ease-in-out">
                                     <div className="rounded-full flex justify-center items-center w-[40px] h-[40px] bg-sky-200">
                                         <Image
@@ -162,13 +197,15 @@ const SingleHeader = () => {
                                             width={24}
                                         />
                                     </div>
-                                    <button className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark text-xl">
-                                        Log in/Sign up
+                                    <button
+                                        onClick={handleAuth}
+                                        className="inline-flex justify-center items-center text-brand hover:bg-brand-over gap-[3px] rounded-10 min-h-[40px] button-md pl-2 pr-6 hover:bg-white text-custom-dark body-md"
+                                    >
+                                        {isLoggedIn ? "Logout" : "Log in/Sign up"}
                                     </button>
                                 </div>
                             </Link>
                         )}
-
                     </div>
                 </div>
             </div>

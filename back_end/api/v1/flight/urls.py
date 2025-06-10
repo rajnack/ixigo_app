@@ -10,4 +10,8 @@ urlpatterns = [
     path('flights/', views.FlightListView.as_view(), name='flight-list'),
     path('airlines/', views.AirlineListView.as_view(), name='airline-list'),
     path('offers/<int:pk>/', views.FlightOfferDetail.as_view(), name='flight_offer_detail'),
+    path('flight-info/', views.FlightInfoList.as_view(), name='flight-info-list'),
+    path('flights/<int:pk>/', views.FlightInfoList.as_view(), name='flight-detail'),
+    path('bookings/', views.BookingList.as_view(), name='booking-list'),  
+    path('bookings/<int:pk>/', views.BookingList.as_view(), name='booking-detail'),
 ]

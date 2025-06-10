@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from flight.models import Feature, Card, ImageCard, City, CityDate, Airline,  Flight, FlightOffer, OfferAvailable
+from flight.models import Feature, Card, ImageCard, City, CityDate, Airline,  Flight, FlightOffer, OfferAvailable, FlightInfo, Booking
 
 
 
@@ -56,3 +56,13 @@ class FlightOfferSerializer(serializers.ModelSerializer):
     class Meta:
         model = FlightOffer
         fields = '__all__'        
+
+class FlightInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FlightInfo
+        fields = '__all__'
+
+class BookingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = '__all__'
